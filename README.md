@@ -1,5 +1,6 @@
 # 6861-Project-2023
 
+## Rough outline
 Objective
 Have a pipeline to convert the natural language description of (some category) games to a formal code representation.
 
@@ -25,7 +26,7 @@ Create a pipeline to allow effective prompting and testing
   - codex_prompting.ipynb: where the actual querying happens
   - all other files: contains data used in codex_prompting, or saved from there.
 
-
+## Less organised details/ideas
 
 Few shot learning
 
