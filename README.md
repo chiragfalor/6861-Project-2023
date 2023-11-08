@@ -23,7 +23,7 @@ Create a pipeline to allow effective prompting and testing
   - prompts.py: converts human_exp.json into normal sentences
 
 - The others pertain to querying GPT to translate sentences into code:
-  - codex_prompting.ipynb: where the actual querying happens
+  - codex_prompting.ipynb: where the actual querying happens. The path to files will need to be modified to run on your computer. Let me know if there are files needed in codex_prompting.ipynb which I haven't uploaded.
   - all other files: contains data used in codex_prompting, or saved from there.
 
 ## Less organised details/ideas
