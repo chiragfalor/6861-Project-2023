@@ -16,6 +16,16 @@ Methods
 Engineer prompts that lead to outputs that match a formalized code representation of the game.
 Create a pipeline to allow effective prompting and testing
 
+## File explanations:
+- There are two types of files: one pertains to creating the sentences describing the ToW scenario. These are
+  - human_exp.json: json code representing the ToW scenarios
+  - prompts.py: converts human_exp.json into normal sentences
+
+- The others pertain to querying GPT to translate sentences into code:
+  - codex_prompting.ipynb: where the actual querying happens
+  - all other files: contains data used in codex_prompting, or saved from there.
+
+
 
 Few shot learning
 
@@ -30,8 +40,8 @@ If GPT is failing, ask it to ask questions
 
 Dataset
 
-Prolog http://gamemaster.stanford.edu/homepage/showgames.php?
-Or probabilistic codehttps://agentmodels.org/chapters/7-multi-agent.html? - different representation allow different questions
+Logic programming  http://gamemaster.stanford.edu/homepage/showgames.php?
+Probabilistic code https://agentmodels.org/chapters/7-multi-agent.html? - different representation allow different questions
 
 Infernce when reading games:
 Assumption that game is winnable, roughly fair, plays a role in inferring rules.
