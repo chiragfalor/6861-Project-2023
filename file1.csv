@@ -1,0 +1,289 @@
+task_id,language_full,language_phrase_1,language_phrase_2,language_phrase_3,language_phrase_4,question sentence,code_phrase_1,code_phrase_2,code_phrase_3,code_phrase_4,question code,choice_index,finish_reason,text,codex_language_phrase_1,codex_code_phrase_1,codex_language_phrase_2,codex_code_phrase_2,codex_language_phrase_3,codex_code_phrase_3
+0," In Game 1, James won against John. In Game 2, James won against John. In Game 3, James won against John."," In Game 1, James won against John."," In Game 2, James won against John."," In Game 3, James won against John.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is James?","condition(winner(['James'],['John'],1) == 1);","condition(winner(['James'],['John'],2) == 1);","condition(winner(['James'],['John'],3) == 1);",,strength(John),0,stop,"
+//  In Game 1, James won against John.
+condition(winner(['John'],['James'],1) == 2);
+
+//  In Game 2, James won against John.
+condition(winner(['John'],['James'],2) == 2);
+
+//  In Game 3, James won against John.
+condition(winner(['John'],['James'],3) == 2);
+
+"," In Game 1, James won against John.","condition(winner(['John'],['James'],1) == 2);"," In Game 2, James won against John.","condition(winner(['John'],['James'],2) == 2);"," In Game 3, James won against John.","condition(winner(['John'],['James'],3) == 2);"
+1," In Game 1, Robert won against Michael. In Game 2, Michael won against William. In Game 3, Michael won against David."," In Game 1, Robert won against Michael."," In Game 2, Michael won against William."," In Game 3, Michael won against David.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Robert?","condition(winner(['Robert'],['Michael'],1) == 1);","condition(winner(['Michael'],['William'],2) == 1);","condition(winner(['Michael'],['David'],3) == 1);",,strength(Michael),0,stop,"
+//  In Game 1, Robert won against Michael.
+condition(winner(['Michael'],['Robert'],1) == 2);
+
+//  In Game 2, Michael won against William.
+condition(winner(['Michael'],['William'],2) == 1);
+
+//  In Game 3, Michael won against David.
+condition(winner(['Michael'],['David'],3) == 1);
+
+"," In Game 1, Robert won against Michael.","condition(winner(['Michael'],['Robert'],1) == 2);"," In Game 2, Michael won against William.","condition(winner(['Michael'],['William'],2) == 1);"," In Game 3, Michael won against David.","condition(winner(['Michael'],['David'],3) == 1);"
+2," In Game 1, Richard won against Charles. In Game 2, Joseph won against Charles. In Game 3, Thomas won against Charles."," In Game 1, Richard won against Charles."," In Game 2, Joseph won against Charles."," In Game 3, Thomas won against Charles.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Richard?","condition(winner(['Richard'],['Charles'],1) == 1);","condition(winner(['Charles'],['Joseph'],2) == 2);","condition(winner(['Charles'],['Thomas'],3) == 2);",,strength(Charles),0,stop,"
+//  In Game 1, Richard won against Charles.
+condition(winner(['Charles'],['Richard'],1) == 2);
+
+//  In Game 2, Joseph won against Charles.
+condition(winner(['Charles'],['Joseph'],2) == 2);
+
+//  In Game 3, Thomas won against Charles.
+condition(winner(['Charles'],['Thomas'],3) == 2);
+
+"," In Game 1, Richard won against Charles.","condition(winner(['Charles'],['Richard'],1) == 2);"," In Game 2, Joseph won against Charles.","condition(winner(['Charles'],['Joseph'],2) == 2);"," In Game 3, Thomas won against Charles.","condition(winner(['Charles'],['Thomas'],3) == 2);"
+3," In Game 1, Christopher won against Daniel. In Game 2, Christopher won against Paul. In Game 3, Christopher won against Mark."," In Game 1, Christopher won against Daniel."," In Game 2, Christopher won against Paul."," In Game 3, Christopher won against Mark.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Christopher?","condition(winner(['Christopher'],['Daniel'],1) == 1);","condition(winner(['Christopher'],['Paul'],2) == 1);","condition(winner(['Christopher'],['Mark'],3) == 1);",,strength(Daniel),0,stop,"
+//  In Game 1, Christopher won against Daniel.
+condition(winner(['Daniel'],['Christopher'],1) == 2);
+
+//  In Game 2, Christopher won against Paul.
+condition(winner(['Christopher'],['Paul'],2) == 1);
+
+//  In Game 3, Christopher won against Mark.
+condition(winner(['Christopher'],['Mark'],3) == 1);
+
+"," In Game 1, Christopher won against Daniel.","condition(winner(['Daniel'],['Christopher'],1) == 2);"," In Game 2, Christopher won against Paul.","condition(winner(['Christopher'],['Paul'],2) == 1);"," In Game 3, Christopher won against Mark.","condition(winner(['Christopher'],['Mark'],3) == 1);"
+4," In Game 1, a team of Donald and George won against a team of Kenneth and Steven. In Game 2, a team of Donald and George won against a team of Edward and Brian. In Game 3, a team of Donald and George won against a team of Ronald and Anthony."," In Game 1, a team of Donald and George won against a team of Kenneth and Steven."," In Game 2, a team of Donald and George won against a team of Edward and Brian."," In Game 3, a team of Donald and George won against a team of Ronald and Anthony.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Donald?","condition(winner(['Donald', 'George'],['Kenneth', 'Steven'],1) == 1);","condition(winner(['Donald', 'George'],['Edward', 'Brian'],2) == 1);","condition(winner(['Donald', 'George'],['Ronald', 'Anthony'],3) == 1);",,strength(George),0,stop,"
+//  In Game 1, a team of Donald and George won against a team of Kenneth and Steven.
+condition(winner(['Donald', 'George'],['Kenneth', 'Steven'],1) == 1);
+
+//  In Game 2, a team of Donald and George won against a team of Edward and Brian.
+condition(winner(['Donald', 'George'],['Edward', 'Brian'],2) == 1);
+
+//  In Game 3, a team of Donald and George won against a team of Ronald and Anthony.
+condition(winner(['Donald', 'George'],['Ronald', 'Anthony'],3) == 1);
+
+"," In Game 1, a team of Donald and George won against a team of Kenneth and Steven.","condition(winner(['Donald', 'George'],['Kenneth', 'Steven'],1) == 1);"," In Game 2, a team of Donald and George won against a team of Edward and Brian.","condition(winner(['Donald', 'George'],['Edward', 'Brian'],2) == 1);"," In Game 3, a team of Donald and George won against a team of Ronald and Anthony.","condition(winner(['Donald', 'George'],['Ronald', 'Anthony'],3) == 1);"
+5," In Game 1, a team of Kevin and Jason won against a team of Timothy and Jose. In Game 2, a team of Kevin and Matthew won against a team of Timothy and Larry. In Game 3, a team of Kevin and Gary won against a team of Timothy and Jeffrey."," In Game 1, a team of Kevin and Jason won against a team of Timothy and Jose."," In Game 2, a team of Kevin and Matthew won against a team of Timothy and Larry."," In Game 3, a team of Kevin and Gary won against a team of Timothy and Jeffrey.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Kevin?","condition(winner(['Kevin', 'Jason'],['Timothy', 'Jose'],1) == 1);","condition(winner(['Kevin', 'Matthew'],['Timothy', 'Larry'],2) == 1);","condition(winner(['Kevin', 'Gary'],['Timothy', 'Jeffrey'],3) == 1);",,strength(Jason),0,stop,"
+//  In Game 1, a team of Kevin and Jason won against a team of Timothy and Jose.
+condition(winner(['Kevin', 'Jason'],['Timothy', 'Jose'],1) == 1);
+
+//  In Game 2, a team of Kevin and Matthew won against a team of Timothy and Larry.
+condition(winner(['Kevin', 'Matthew'],['Timothy', 'Larry'],2) == 1);
+
+//  In Game 3, a team of Kevin and Gary won against a team of Timothy and Jeffrey.
+condition(winner(['Kevin', 'Gary'],['Timothy', 'Jeffrey'],3) == 1);
+
+"," In Game 1, a team of Kevin and Jason won against a team of Timothy and Jose.","condition(winner(['Kevin', 'Jason'],['Timothy', 'Jose'],1) == 1);"," In Game 2, a team of Kevin and Matthew won against a team of Timothy and Larry.","condition(winner(['Kevin', 'Matthew'],['Timothy', 'Larry'],2) == 1);"," In Game 3, a team of Kevin and Gary won against a team of Timothy and Jeffrey.","condition(winner(['Kevin', 'Gary'],['Timothy', 'Jeffrey'],3) == 1);"
+6," In Game 1, a team of Frank and Scott won against a team of Andrew and Raymond. In Game 2, a team of Andrew and Raymond won against a team of Scott and Eric. In Game 3, a team of Andrew and Raymond won against a team of Scott and Stephen."," In Game 1, a team of Frank and Scott won against a team of Andrew and Raymond."," In Game 2, a team of Andrew and Raymond won against a team of Scott and Eric."," In Game 3, a team of Andrew and Raymond won against a team of Scott and Stephen.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Frank?","condition(winner(['Frank', 'Scott'],['Andrew', 'Raymond'],1) == 1);","condition(winner(['Scott', 'Eric'],['Andrew', 'Raymond'],2) == 2);","condition(winner(['Scott', 'Stephen'],['Andrew', 'Raymond'],3) == 2);",,strength(Scott),0,stop,"
+//  In Game 1, a team of Frank and Scott won against a team of Andrew and Raymond.
+condition(winner(['Frank', 'Scott'],['Andrew', 'Raymond'],1) == 1);
+
+//  In Game 2, a team of Andrew and Raymond won against a team of Scott and Eric.
+condition(winner(['Andrew', 'Raymond'],['Scott', 'Eric'],2) == 1);
+
+//  In Game 3, a team of Andrew and Raymond won against a team of Scott and Stephen.
+condition(winner(['Andrew', 'Raymond'],['Scott', 'Stephen'],3) == 1);
+
+"," In Game 1, a team of Frank and Scott won against a team of Andrew and Raymond.","condition(winner(['Frank', 'Scott'],['Andrew', 'Raymond'],1) == 1);"," In Game 2, a team of Andrew and Raymond won against a team of Scott and Eric.","condition(winner(['Andrew', 'Raymond'],['Scott', 'Eric'],2) == 1);"," In Game 3, a team of Andrew and Raymond won against a team of Scott and Stephen.","condition(winner(['Andrew', 'Raymond'],['Scott', 'Stephen'],3) == 1);"
+7," In Game 1, a team of Gregory and Joshua won against a team of Walter and Patrick. In Game 2, a team of Joshua and Jerry won against a team of Walter and Patrick. In Game 3, a team of Joshua and Dennis won against a team of Walter and Patrick."," In Game 1, a team of Gregory and Joshua won against a team of Walter and Patrick."," In Game 2, a team of Joshua and Jerry won against a team of Walter and Patrick."," In Game 3, a team of Joshua and Dennis won against a team of Walter and Patrick.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Gregory?","condition(winner(['Gregory', 'Joshua'],['Walter', 'Patrick'],1) == 1);","condition(winner(['Joshua', 'Jerry'],['Walter', 'Patrick'],2) == 1);","condition(winner(['Joshua', 'Dennis'],['Walter', 'Patrick'],3) == 1);",,strength(Joshua),0,stop,"
+//  In Game 1, a team of Gregory and Joshua won against a team of Walter and Patrick.
+condition(winner(['Gregory', 'Joshua'],['Walter', 'Patrick'],1) == 1);
+
+//  In Game 2, a team of Joshua and Jerry won against a team of Walter and Patrick.
+condition(winner(['Joshua', 'Jerry'],['Walter', 'Patrick'],2) == 1);
+
+//  In Game 3, a team of Joshua and Dennis won against a team of Walter and Patrick.
+condition(winner(['Joshua', 'Dennis'],['Walter', 'Patrick'],3) == 1);
+
+"," In Game 1, a team of Gregory and Joshua won against a team of Walter and Patrick.","condition(winner(['Gregory', 'Joshua'],['Walter', 'Patrick'],1) == 1);"," In Game 2, a team of Joshua and Jerry won against a team of Walter and Patrick.","condition(winner(['Joshua', 'Jerry'],['Walter', 'Patrick'],2) == 1);"," In Game 3, a team of Joshua and Dennis won against a team of Walter and Patrick.","condition(winner(['Joshua', 'Dennis'],['Walter', 'Patrick'],3) == 1);"
+8," In Game 1, a team of Peter and Harold won against a team of Carl and Arthur. In Game 2, a team of Peter and Douglas won against a team of Ryan and Roger. In Game 3, a team of Peter and Henry won against a team of Joe and Juan."," In Game 1, a team of Peter and Harold won against a team of Carl and Arthur."," In Game 2, a team of Peter and Douglas won against a team of Ryan and Roger."," In Game 3, a team of Peter and Henry won against a team of Joe and Juan.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Peter?","condition(winner(['Peter', 'Harold'],['Carl', 'Arthur'],1) == 1);","condition(winner(['Peter', 'Douglas'],['Ryan', 'Roger'],2) == 1);","condition(winner(['Peter', 'Henry'],['Joe', 'Juan'],3) == 1);",,strength(Harold),0,stop,"
+//  In Game 1, a team of Peter and Harold won against a team of Carl and Arthur.
+condition(winner(['Peter', 'Harold'],['Carl', 'Arthur'],1) == 1);
+
+//  In Game 2, a team of Peter and Douglas won against a team of Ryan and Roger.
+condition(winner(['Peter', 'Douglas'],['Ryan', 'Roger'],2) == 1);
+
+//  In Game 3, a team of Peter and Henry won against a team of Joe and Juan.
+condition(winner(['Peter', 'Henry'],['Joe', 'Juan'],3) == 1);
+
+"," In Game 1, a team of Peter and Harold won against a team of Carl and Arthur.","condition(winner(['Peter', 'Harold'],['Carl', 'Arthur'],1) == 1);"," In Game 2, a team of Peter and Douglas won against a team of Ryan and Roger.","condition(winner(['Peter', 'Douglas'],['Ryan', 'Roger'],2) == 1);"," In Game 3, a team of Peter and Henry won against a team of Joe and Juan.","condition(winner(['Peter', 'Henry'],['Joe', 'Juan'],3) == 1);"
+9," In Game 1, a team of Jack and Albert won against a team of Jonathan and Justin. In Game 2, a team of Jack and Jonathan won against a team of Albert and Justin. In Game 3, a team of Jack and Justin won against a team of Albert and Jonathan."," In Game 1, a team of Jack and Albert won against a team of Jonathan and Justin."," In Game 2, a team of Jack and Jonathan won against a team of Albert and Justin."," In Game 3, a team of Jack and Justin won against a team of Albert and Jonathan.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Jack?","condition(winner(['Jack', 'Albert'],['Jonathan', 'Justin'],1) == 1);","condition(winner(['Jack', 'Jonathan'],['Albert', 'Justin'],2) == 1);","condition(winner(['Jack', 'Justin'],['Albert', 'Jonathan'],3) == 1);",,strength(Albert),0,stop,"
+//  In Game 1, a team of Jack and Albert won against a team of Jonathan and Justin.
+condition(winner(['Jack', 'Albert'],['Jonathan', 'Justin'],1) == 1);
+
+//  In Game 2, a team of Jack and Jonathan won against a team of Albert and Justin.
+condition(winner(['Jack', 'Jonathan'],['Albert', 'Justin'],2) == 1);
+
+//  In Game 3, a team of Jack and Justin won against a team of Albert and Jonathan.
+condition(winner(['Jack', 'Justin'],['Albert', 'Jonathan'],3) == 1);
+
+"," In Game 1, a team of Jack and Albert won against a team of Jonathan and Justin.","condition(winner(['Jack', 'Albert'],['Jonathan', 'Justin'],1) == 1);"," In Game 2, a team of Jack and Jonathan won against a team of Albert and Justin.","condition(winner(['Jack', 'Jonathan'],['Albert', 'Justin'],2) == 1);"," In Game 3, a team of Jack and Justin won against a team of Albert and Jonathan.","condition(winner(['Jack', 'Justin'],['Albert', 'Jonathan'],3) == 1);"
+10," In Game 1, Gerald won against Terry. In Game 2, Gerald won against Terry. In Game 3, Gerald won against Terry."," In Game 1, Gerald won against Terry."," In Game 2, Gerald won against Terry."," In Game 3, Gerald won against Terry.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Terry?","condition(winner(['Terry'],['Gerald'],1) == 2);","condition(winner(['Terry'],['Gerald'],2) == 2);","condition(winner(['Terry'],['Gerald'],3) == 2);",,strength(Gerald),0,stop,"
+//  In Game 1, Gerald won against Terry.
+condition(winner(['Terry'],['Gerald'],1) == 2);
+
+//  In Game 2, Gerald won against Terry.
+condition(winner(['Terry'],['Gerald'],2) == 2);
+
+//  In Game 3, Gerald won against Terry.
+condition(winner(['Terry'],['Gerald'],3) == 2);
+
+"," In Game 1, Gerald won against Terry.","condition(winner(['Terry'],['Gerald'],1) == 2);"," In Game 2, Gerald won against Terry.","condition(winner(['Terry'],['Gerald'],2) == 2);"," In Game 3, Gerald won against Terry.","condition(winner(['Terry'],['Gerald'],3) == 2);"
+11," In Game 1, Samuel won against Keith. In Game 2, Willie won against Samuel. In Game 3, Ralph won against Samuel."," In Game 1, Samuel won against Keith."," In Game 2, Willie won against Samuel."," In Game 3, Ralph won against Samuel.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Keith?","condition(winner(['Keith'],['Samuel'],1) == 2);","condition(winner(['Samuel'],['Willie'],2) == 2);","condition(winner(['Samuel'],['Ralph'],3) == 2);",,strength(Samuel),0,stop,"
+//  In Game 1, Samuel won against Keith.
+condition(winner(['Samuel'],['Keith'],1) == 1);
+
+//  In Game 2, Willie won against Samuel.
+condition(winner(['Willie'],['Samuel'],2) == 1);
+
+//  In Game 3, Ralph won against Samuel.
+condition(winner(['Ralph'],['Samuel'],3) == 1);
+
+"," In Game 1, Samuel won against Keith.","condition(winner(['Samuel'],['Keith'],1) == 1);"," In Game 2, Willie won against Samuel.","condition(winner(['Willie'],['Samuel'],2) == 1);"," In Game 3, Ralph won against Samuel.","condition(winner(['Ralph'],['Samuel'],3) == 1);"
+12," In Game 1, Nicholas won against Lawrence. In Game 2, Nicholas won against Roy. In Game 3, Nicholas won against Benjamin."," In Game 1, Nicholas won against Lawrence."," In Game 2, Nicholas won against Roy."," In Game 3, Nicholas won against Benjamin.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Lawrence?","condition(winner(['Lawrence'],['Nicholas'],1) == 2);","condition(winner(['Nicholas'],['Roy'],2) == 1);","condition(winner(['Nicholas'],['Benjamin'],3) == 1);",,strength(Nicholas),0,stop,"
+//  In Game 1, Nicholas won against Lawrence.
+condition(winner(['Lawrence'],['Nicholas'],1) == 2);
+
+//  In Game 2, Nicholas won against Roy.
+condition(winner(['Roy'],['Nicholas'],2) == 2);
+
+//  In Game 3, Nicholas won against Benjamin.
+condition(winner(['Benjamin'],['Nicholas'],3) == 2);
+
+"," In Game 1, Nicholas won against Lawrence.","condition(winner(['Lawrence'],['Nicholas'],1) == 2);"," In Game 2, Nicholas won against Roy.","condition(winner(['Roy'],['Nicholas'],2) == 2);"," In Game 3, Nicholas won against Benjamin.","condition(winner(['Benjamin'],['Nicholas'],3) == 2);"
+13," In Game 1, Brandon won against Bruce. In Game 2, Adam won against Bruce. In Game 3, Harry won against Bruce."," In Game 1, Brandon won against Bruce."," In Game 2, Adam won against Bruce."," In Game 3, Harry won against Bruce.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Bruce?","condition(winner(['Bruce'],['Brandon'],1) == 2);","condition(winner(['Bruce'],['Adam'],2) == 2);","condition(winner(['Bruce'],['Harry'],3) == 2);",,strength(Brandon),0,stop,"
+//  In Game 1, Brandon won against Bruce.
+condition(winner(['Bruce'],['Brandon'],1) == 2);
+
+//  In Game 2, Adam won against Bruce.
+condition(winner(['Bruce'],['Adam'],2) == 2);
+
+//  In Game 3, Harry won against Bruce.
+condition(winner(['Bruce'],['Harry'],3) == 2);
+
+"," In Game 1, Brandon won against Bruce.","condition(winner(['Bruce'],['Brandon'],1) == 2);"," In Game 2, Adam won against Bruce.","condition(winner(['Bruce'],['Adam'],2) == 2);"," In Game 3, Harry won against Bruce.","condition(winner(['Bruce'],['Harry'],3) == 2);"
+14," In Game 1, a team of Billy and Steve won against a team of Fred and Wayne. In Game 2, a team of Louis and Jeremy won against a team of Fred and Wayne. In Game 3, a team of Aaron and Randy won against a team of Fred and Wayne."," In Game 1, a team of Billy and Steve won against a team of Fred and Wayne."," In Game 2, a team of Louis and Jeremy won against a team of Fred and Wayne."," In Game 3, a team of Aaron and Randy won against a team of Fred and Wayne.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Fred?","condition(winner(['Fred', 'Wayne'],['Billy', 'Steve'],1) == 2);","condition(winner(['Fred', 'Wayne'],['Louis', 'Jeremy'],2) == 2);","condition(winner(['Fred', 'Wayne'],['Aaron', 'Randy'],3) == 2);",,strength(Wayne),0,stop,"
+//  In Game 1, a team of Billy and Steve won against a team of Fred and Wayne.
+condition(winner(['Billy', 'Steve'],['Fred', 'Wayne'],1) == 1);
+
+//  In Game 2, a team of Louis and Jeremy won against a team of Fred and Wayne.
+condition(winner(['Louis', 'Jeremy'],['Fred', 'Wayne'],2) == 1);
+
+//  In Game 3, a team of Aaron and Randy won against a team of Fred and Wayne.
+condition(winner(['Aaron', 'Randy'],['Fred', 'Wayne'],3) == 1);
+
+"," In Game 1, a team of Billy and Steve won against a team of Fred and Wayne.","condition(winner(['Billy', 'Steve'],['Fred', 'Wayne'],1) == 1);"," In Game 2, a team of Louis and Jeremy won against a team of Fred and Wayne.","condition(winner(['Louis', 'Jeremy'],['Fred', 'Wayne'],2) == 1);"," In Game 3, a team of Aaron and Randy won against a team of Fred and Wayne.","condition(winner(['Aaron', 'Randy'],['Fred', 'Wayne'],3) == 1);"
+15," In Game 1, a team of Bobby and Victor won against a team of Howard and Eugene. In Game 2, a team of Bobby and Martin won against a team of Howard and Carlos. In Game 3, a team of Bobby and Ernest won against a team of Howard and Russell."," In Game 1, a team of Bobby and Victor won against a team of Howard and Eugene."," In Game 2, a team of Bobby and Martin won against a team of Howard and Carlos."," In Game 3, a team of Bobby and Ernest won against a team of Howard and Russell.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Howard?","condition(winner(['Howard', 'Eugene'],['Bobby', 'Victor'],1) == 2);","condition(winner(['Howard', 'Carlos'],['Bobby', 'Martin'],2) == 2);","condition(winner(['Howard', 'Russell'],['Bobby', 'Ernest'],3) == 2);",,strength(Eugene),0,stop,"
+//  In Game 1, a team of Bobby and Victor won against a team of Howard and Eugene.
+condition(winner(['Bobby', 'Victor'],['Howard', 'Eugene'],1) == 1);
+
+//  In Game 2, a team of Bobby and Martin won against a team of Howard and Carlos.
+condition(winner(['Bobby', 'Martin'],['Howard', 'Carlos'],2) == 1);
+
+//  In Game 3, a team of Bobby and Ernest won against a team of Howard and Russell.
+condition(winner(['Bobby', 'Ernest'],['Howard', 'Russell'],3) == 1);
+
+"," In Game 1, a team of Bobby and Victor won against a team of Howard and Eugene.","condition(winner(['Bobby', 'Victor'],['Howard', 'Eugene'],1) == 1);"," In Game 2, a team of Bobby and Martin won against a team of Howard and Carlos.","condition(winner(['Bobby', 'Martin'],['Howard', 'Carlos'],2) == 1);"," In Game 3, a team of Bobby and Ernest won against a team of Howard and Russell.","condition(winner(['Bobby', 'Ernest'],['Howard', 'Russell'],3) == 1);"
+16," In Game 1, a team of Alan and Shawn won against a team of Phillip and Todd. In Game 2, a team of Todd and Jesse won against a team of Alan and Shawn. In Game 3, a team of Todd and Craig won against a team of Alan and Shawn."," In Game 1, a team of Alan and Shawn won against a team of Phillip and Todd."," In Game 2, a team of Todd and Jesse won against a team of Alan and Shawn."," In Game 3, a team of Todd and Craig won against a team of Alan and Shawn.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Phillip?","condition(winner(['Phillip', 'Todd'],['Alan', 'Shawn'],1) == 2);","condition(winner(['Todd', 'Jesse'],['Alan', 'Shawn'],2) == 1);","condition(winner(['Todd', 'Craig'],['Alan', 'Shawn'],3) == 1);",,strength(Todd),0,stop,"
+//  In Game 1, a team of Alan and Shawn won against a team of Phillip and Todd.
+condition(winner(['Alan', 'Shawn'],['Phillip', 'Todd'],1) == 1);
+
+//  In Game 2, a team of Todd and Jesse won against a team of Alan and Shawn.
+condition(winner(['Todd', 'Jesse'],['Alan', 'Shawn'],2) == 1);
+
+//  In Game 3, a team of Todd and Craig won against a team of Alan and Shawn.
+condition(winner(['Todd', 'Craig'],['Alan', 'Shawn'],3) == 1);
+
+"," In Game 1, a team of Alan and Shawn won against a team of Phillip and Todd.","condition(winner(['Alan', 'Shawn'],['Phillip', 'Todd'],1) == 1);"," In Game 2, a team of Todd and Jesse won against a team of Alan and Shawn.","condition(winner(['Todd', 'Jesse'],['Alan', 'Shawn'],2) == 1);"," In Game 3, a team of Todd and Craig won against a team of Alan and Shawn.","condition(winner(['Todd', 'Craig'],['Alan', 'Shawn'],3) == 1);"
+17," In Game 1, a team of Johnny and Earl won against a team of Clarence and Sean. In Game 2, a team of Johnny and Earl won against a team of Sean and Philip. In Game 3, a team of Johnny and Earl won against a team of Sean and Chris."," In Game 1, a team of Johnny and Earl won against a team of Clarence and Sean."," In Game 2, a team of Johnny and Earl won against a team of Sean and Philip."," In Game 3, a team of Johnny and Earl won against a team of Sean and Chris.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Clarence?","condition(winner(['Clarence', 'Sean'],['Johnny', 'Earl'],1) == 2);","condition(winner(['Sean', 'Philip'],['Johnny', 'Earl'],2) == 2);","condition(winner(['Sean', 'Chris'],['Johnny', 'Earl'],3) == 2);",,strength(Sean),0,stop,"
+//  In Game 1, a team of Johnny and Earl won against a team of Clarence and Sean.
+condition(winner(['Johnny', 'Earl'],['Clarence', 'Sean'],1) == 1);
+
+//  In Game 2, a team of Johnny and Earl won against a team of Sean and Philip.
+condition(winner(['Johnny', 'Earl'],['Sean', 'Philip'],2) == 1);
+
+//  In Game 3, a team of Johnny and Earl won against a team of Sean and Chris.
+condition(winner(['Johnny', 'Earl'],['Sean', 'Chris'],3) == 1);
+
+"," In Game 1, a team of Johnny and Earl won against a team of Clarence and Sean.","condition(winner(['Johnny', 'Earl'],['Clarence', 'Sean'],1) == 1);"," In Game 2, a team of Johnny and Earl won against a team of Sean and Philip.","condition(winner(['Johnny', 'Earl'],['Sean', 'Philip'],2) == 1);"," In Game 3, a team of Johnny and Earl won against a team of Sean and Chris.","condition(winner(['Johnny', 'Earl'],['Sean', 'Chris'],3) == 1);"
+18," In Game 1, a team of Tony and Luis won against a team of Jimmy and Antonio. In Game 2, a team of Mike and Stanley won against a team of Jimmy and Danny. In Game 3, a team of Leonard and Nathan won against a team of Jimmy and Bryan."," In Game 1, a team of Tony and Luis won against a team of Jimmy and Antonio."," In Game 2, a team of Mike and Stanley won against a team of Jimmy and Danny."," In Game 3, a team of Leonard and Nathan won against a team of Jimmy and Bryan.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Jimmy?","condition(winner(['Jimmy', 'Antonio'],['Tony', 'Luis'],1) == 2);","condition(winner(['Jimmy', 'Danny'],['Mike', 'Stanley'],2) == 2);","condition(winner(['Jimmy', 'Bryan'],['Leonard', 'Nathan'],3) == 2);",,strength(Antonio),0,stop,"
+//  In Game 1, a team of Tony and Luis won against a team of Jimmy and Antonio.
+condition(winner(['Tony', 'Luis'],['Jimmy', 'Antonio'],1) == 1);
+
+//  In Game 2, a team of Mike and Stanley won against a team of Jimmy and Danny.
+condition(winner(['Mike', 'Stanley'],['Jimmy', 'Danny'],2) == 1);
+
+//  In Game 3, a team of Leonard and Nathan won against a team of Jimmy and Bryan.
+condition(winner(['Leonard', 'Nathan'],['Jimmy', 'Bryan'],3) == 1);
+
+"," In Game 1, a team of Tony and Luis won against a team of Jimmy and Antonio.","condition(winner(['Tony', 'Luis'],['Jimmy', 'Antonio'],1) == 1);"," In Game 2, a team of Mike and Stanley won against a team of Jimmy and Danny.","condition(winner(['Mike', 'Stanley'],['Jimmy', 'Danny'],2) == 1);"," In Game 3, a team of Leonard and Nathan won against a team of Jimmy and Bryan.","condition(winner(['Leonard', 'Nathan'],['Jimmy', 'Bryan'],3) == 1);"
+19," In Game 1, a team of Rodney and Curtis won against a team of Dale and Manuel. In Game 2, a team of Manuel and Curtis won against a team of Dale and Rodney. In Game 3, a team of Manuel and Rodney won against a team of Dale and Curtis."," In Game 1, a team of Rodney and Curtis won against a team of Dale and Manuel."," In Game 2, a team of Manuel and Curtis won against a team of Dale and Rodney."," In Game 3, a team of Manuel and Rodney won against a team of Dale and Curtis.",,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Dale?","condition(winner(['Dale', 'Manuel'],['Rodney', 'Curtis'],1) == 2);","condition(winner(['Dale', 'Rodney'],['Manuel', 'Curtis'],2) == 2);","condition(winner(['Dale', 'Curtis'],['Manuel', 'Rodney'],3) == 2);",,strength(Manuel),0,stop,"
+//  In Game 1, a team of Rodney and Curtis won against a team of Dale and Manuel.
+condition(winner(['Rodney', 'Curtis'],['Dale', 'Manuel'],1) == 1);
+
+//  In Game 2, a team of Manuel and Curtis won against a team of Dale and Rodney.
+condition(winner(['Manuel', 'Curtis'],['Dale', 'Rodney'],2) == 1);
+
+//  In Game 3, a team of Manuel and Rodney won against a team of Dale and Curtis.
+condition(winner(['Manuel', 'Rodney'],['Dale', 'Curtis'],3) == 1);
+
+"," In Game 1, a team of Rodney and Curtis won against a team of Dale and Manuel.","condition(winner(['Rodney', 'Curtis'],['Dale', 'Manuel'],1) == 1);"," In Game 2, a team of Manuel and Curtis won against a team of Dale and Rodney.","condition(winner(['Manuel', 'Curtis'],['Dale', 'Rodney'],2) == 1);"," In Game 3, a team of Manuel and Rodney won against a team of Dale and Curtis.","condition(winner(['Manuel', 'Rodney'],['Dale', 'Curtis'],3) == 1);"
+20," In Game 1, a team of Norman and Allen won against Marvin."," In Game 1, a team of Norman and Allen won against Marvin.",,,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Norman?","condition(winner(['Norman', 'Allen'],['Marvin'],1) == 1);",,,,strength(Allen),0,stop,"
+//  In Game 1, a team of Norman and Allen won against Marvin.
+condition(winner(['Norman', 'Allen'],['Marvin'],1) == 1);
+
+"," In Game 1, a team of Norman and Allen won against Marvin.","condition(winner(['Norman', 'Allen'],['Marvin'],1) == 1);",,,,
+21," In Game 1, a team of Glenn and Jeffery won against Vincent."," In Game 1, a team of Glenn and Jeffery won against Vincent.",,,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Vincent?","condition(winner(['Vincent'],['Glenn', 'Jeffery'],1) == 2);",,,,strength(Glenn),0,stop,"
+//  In Game 1, a team of Glenn and Jeffery won against Vincent.
+condition(winner(['Glenn', 'Jeffery'],['Vincent'],1) == 1);
+
+"," In Game 1, a team of Glenn and Jeffery won against Vincent.","condition(winner(['Glenn', 'Jeffery'],['Vincent'],1) == 1);",,,,
+22," In Game 1, a team of Travis and Jeff won against a team of Jacob, Lee, and Melvin. In Game 2, Jeff won against a team of Jacob and Lee."," In Game 1, a team of Travis and Jeff won against a team of Jacob, Lee, and Melvin."," In Game 2, Jeff won against a team of Jacob and Lee.",,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Travis?","condition(winner(['Travis', 'Jeff'],['Jacob', 'Lee', 'Melvin'],1) == 1);","condition(winner(['Jeff'],['Jacob', 'Lee'],2) == 1);",,,strength(Jeff),0,stop,"
+//  In Game 1, a team of Travis and Jeff won against a team of Jacob, Lee, and Melvin.
+condition(winner(['Travis', 'Jeff'],['Jacob', 'Lee', 'Melvin'],1) == 1);
+
+//  In Game 2, Jeff won against a team of Jacob and Lee.
+condition(winner(['Jeff'],['Jacob', 'Lee'],2) == 1);
+
+"," In Game 1, a team of Travis and Jeff won against a team of Jacob, Lee, and Melvin.","condition(winner(['Travis', 'Jeff'],['Jacob', 'Lee', 'Melvin'],1) == 1);"," In Game 2, Jeff won against a team of Jacob and Lee.","condition(winner(['Jeff'],['Jacob', 'Lee'],2) == 1);",,
+23," In Game 1, a team of Alfred and Bradley won against a team of Jesus, Kyle, and Francis. In Game 2, a team of Alfred and Jesus won against a team of Kyle, Francis, and Bradley."," In Game 1, a team of Alfred and Bradley won against a team of Jesus, Kyle, and Francis."," In Game 2, a team of Alfred and Jesus won against a team of Kyle, Francis, and Bradley.",,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Alfred?","condition(winner(['Alfred', 'Bradley'],['Jesus', 'Kyle', 'Francis'],1) == 1);","condition(winner(['Alfred', 'Jesus'],['Kyle', 'Francis', 'Bradley'],2) == 1);",,,strength(Kyle),0,stop,"
+//  In Game 1, a team of Alfred and Bradley won against a team of Jesus, Kyle, and Francis.
+condition(winner(['Alfred', 'Bradley'],['Jesus', 'Kyle', 'Francis'],1) == 1);
+
+//  In Game 2, a team of Alfred and Jesus won against a team of Kyle, Francis, and Bradley.
+condition(winner(['Alfred', 'Jesus'],['Kyle', 'Francis', 'Bradley'],2) == 1);
+
+"," In Game 1, a team of Alfred and Bradley won against a team of Jesus, Kyle, and Francis.","condition(winner(['Alfred', 'Bradley'],['Jesus', 'Kyle', 'Francis'],1) == 1);"," In Game 2, a team of Alfred and Jesus won against a team of Kyle, Francis, and Bradley.","condition(winner(['Alfred', 'Jesus'],['Kyle', 'Francis', 'Bradley'],2) == 1);",,
+24," In Game 1, a team of Herbert, Frederick, and Ray won against a team of Joel, Edwin, and Don. In Game 2, a team of Frederick and Ray won against a team of Joel, Edwin, and Don."," In Game 1, a team of Herbert, Frederick, and Ray won against a team of Joel, Edwin, and Don."," In Game 2, a team of Frederick and Ray won against a team of Joel, Edwin, and Don.",,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Herbert?","condition(winner(['Herbert', 'Frederick', 'Ray'],['Joel', 'Edwin', 'Don'],1) == 1);","condition(winner(['Frederick', 'Ray'],['Joel', 'Edwin', 'Don'],2) == 1);",,,strength(Frederick),0,stop,"
+//  In Game 1, a team of Herbert, Frederick, and Ray won against a team of Joel, Edwin, and Don.
+condition(winner(['Herbert', 'Frederick', 'Ray'],['Joel', 'Edwin', 'Don'],1) == 1);
+
+//  In Game 2, a team of Frederick and Ray won against a team of Joel, Edwin, and Don.
+condition(winner(['Frederick', 'Ray'],['Joel', 'Edwin', 'Don'],2) == 1);
+
+"," In Game 1, a team of Herbert, Frederick, and Ray won against a team of Joel, Edwin, and Don.","condition(winner(['Herbert', 'Frederick', 'Ray'],['Joel', 'Edwin', 'Don'],1) == 1);"," In Game 2, a team of Frederick and Ray won against a team of Joel, Edwin, and Don.","condition(winner(['Frederick', 'Ray'],['Joel', 'Edwin', 'Don'],2) == 1);",,
+25," In Game 1, Troy won against a team of Eddie and Ricky."," In Game 1, Troy won against a team of Eddie and Ricky.",,,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Eddie?","condition(winner(['Eddie', 'Ricky'],['Troy'],1) == 2);",,,,strength(Ricky),0,stop,"
+//  In Game 1, Troy won against a team of Eddie and Ricky.
+condition(winner(['Troy'],['Eddie', 'Ricky'],1) == 1);
+
+"," In Game 1, Troy won against a team of Eddie and Ricky.","condition(winner(['Troy'],['Eddie', 'Ricky'],1) == 1);",,,,
+26," In Game 1, Randall won against a team of Barry and Alexander."," In Game 1, Randall won against a team of Barry and Alexander.",,,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Randall?","condition(winner(['Randall'],['Barry', 'Alexander'],1) == 1);",,,,strength(Barry),0,stop,"
+//  In Game 1, Randall won against a team of Barry and Alexander.
+condition(winner(['Randall'],['Barry', 'Alexander'],1) == 1);
+
+"," In Game 1, Randall won against a team of Barry and Alexander.","condition(winner(['Randall'],['Barry', 'Alexander'],1) == 1);",,,,
+27," In Game 1, a team of Francisco, Marcus, and Micheal won against a team of Bernard and Mario. In Game 2, a team of Francisco and Marcus won against Mario."," In Game 1, a team of Francisco, Marcus, and Micheal won against a team of Bernard and Mario."," In Game 2, a team of Francisco and Marcus won against Mario.",,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Bernard?","condition(winner(['Bernard', 'Mario'],['Francisco', 'Marcus', 'Micheal'],1) == 2);","condition(winner(['Mario'],['Francisco', 'Marcus'],2) == 2);",,,strength(Mario),0,stop,"
+//  In Game 1, a team of Francisco, Marcus, and Micheal won against a team of Bernard and Mario.
+condition(winner(['Francisco', 'Marcus', 'Micheal'],['Bernard', 'Mario'],1) == 1);
+
+//  In Game 2, a team of Francisco and Marcus won against Mario.
+condition(winner(['Francisco', 'Marcus'],['Mario'],2) == 1);
+
+"," In Game 1, a team of Francisco, Marcus, and Micheal won against a team of Bernard and Mario.","condition(winner(['Francisco', 'Marcus', 'Micheal'],['Bernard', 'Mario'],1) == 1);"," In Game 2, a team of Francisco and Marcus won against Mario.","condition(winner(['Francisco', 'Marcus'],['Mario'],2) == 1);",,
+28," In Game 1, a team of Jay, Clifford, and Miguel won against a team of Theodore and Oscar. In Game 2, a team of Clifford, Miguel, and Oscar won against a team of Theodore and Jay."," In Game 1, a team of Jay, Clifford, and Miguel won against a team of Theodore and Oscar."," In Game 2, a team of Clifford, Miguel, and Oscar won against a team of Theodore and Jay.",,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Theodore?","condition(winner(['Theodore', 'Oscar'],['Jay', 'Clifford', 'Miguel'],1) == 2);","condition(winner(['Theodore', 'Jay'],['Clifford', 'Miguel', 'Oscar'],2) == 2);",,,strength(Clifford),0,stop,"
+//  In Game 1, a team of Jay, Clifford, and Miguel won against a team of Theodore and Oscar.
+condition(winner(['Jay', 'Clifford', 'Miguel'],['Theodore', 'Oscar'],1) == 1);
+
+//  In Game 2, a team of Clifford, Miguel, and Oscar won against a team of Theodore and Jay.
+condition(winner(['Clifford', 'Miguel', 'Oscar'],['Theodore', 'Jay'],2) == 1);
+
+"," In Game 1, a team of Jay, Clifford, and Miguel won against a team of Theodore and Oscar.","condition(winner(['Jay', 'Clifford', 'Miguel'],['Theodore', 'Oscar'],1) == 1);"," In Game 2, a team of Clifford, Miguel, and Oscar won against a team of Theodore and Jay.","condition(winner(['Clifford', 'Miguel', 'Oscar'],['Theodore', 'Jay'],2) == 1);",,
+29," In Game 1, a team of Alex, Jon, and Ronnie won against a team of Jim, Tom, and Calvin. In Game 2, a team of Alex, Jon, and Ronnie won against a team of Tom and Calvin."," In Game 1, a team of Alex, Jon, and Ronnie won against a team of Jim, Tom, and Calvin."," In Game 2, a team of Alex, Jon, and Ronnie won against a team of Tom and Calvin.",,,"Question: On a scale from 0 (very weak) to 100 (very strong), how strong is Jim?","condition(winner(['Jim', 'Tom', 'Calvin'],['Alex', 'Jon', 'Ronnie'],1) == 2);","condition(winner(['Tom', 'Calvin'],['Alex', 'Jon', 'Ronnie'],2) == 2);",,,strength(Tom),0,stop,"
+//  In Game 1, a team of Alex, Jon, and Ronnie won against a team of Jim, Tom, and Calvin.
+condition(winner(['Alex', 'Jon', 'Ronnie'],['Jim', 'Tom', 'Calvin'],1) == 1);
+
+//  In Game 2, a team of Alex, Jon, and Ronnie won against a team of Tom and Calvin.
+condition(winner(['Alex', 'Jon', 'Ronnie'],['Tom', 'Calvin'],2) == 1);
+
+"," In Game 1, a team of Alex, Jon, and Ronnie won against a team of Jim, Tom, and Calvin.","condition(winner(['Alex', 'Jon', 'Ronnie'],['Jim', 'Tom', 'Calvin'],1) == 1);"," In Game 2, a team of Alex, Jon, and Ronnie won against a team of Tom and Calvin.","condition(winner(['Alex', 'Jon', 'Ronnie'],['Tom', 'Calvin'],2) == 1);",,
