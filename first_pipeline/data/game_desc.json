@@ -1,0 +1,17 @@
+{
+    "game_descriptions": [
+        {
+            "id": 0,
+            "name": "Tic Tac Toe",
+            "description": "Tic Tac Toe is a game for two players, X and O, who take turns marking the spaces in a 3x3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.",
+            "ppl_code_file_path": "game_desc_codes/tictactoe.js"
+        },
+        {
+            "id": 1,
+            "name": "dummy2",
+            "description": "dummy2",
+            "ppl_code_file_path": "game_desc_codes/dummy2.js"
+        }
+
+    ]
+}
