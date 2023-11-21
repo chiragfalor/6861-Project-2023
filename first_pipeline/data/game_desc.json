@@ -2,16 +2,123 @@
     "game_descriptions": [
         {
             "id": 0,
-            "name": "Tic Tac Toe",
-            "description": "Tic Tac Toe is a game for two players, X and O, who take turns marking the spaces in a 3x3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.",
-            "ppl_code_file_path": "game_desc_codes/tictactoe.js"
+            "name": "A Simple Game",
+            "description": "This game is played on the following 4x4 square board. MOVE - On each turn, each player move one of his stones into an adjacent orthogonal empty cell. GOAL - Wins the player that makes a (orthogonal or diagonal) 3 in-a-row.",
+            "ppl_code_file_path": "game_desc_codes/asimplegame.txt"
         },
         {
             "id": 1,
-            "name": "dummy2",
-            "description": "dummy2",
-            "ppl_code_file_path": "game_desc_codes/dummy2.js"
-        }
-
+            "name": "3D Tic Tac Toe",
+            "description": "Play occurs on a 4x4x4 grid. One player places an X, the other places an O and players take turns placing their marks in the grid, attempting to get four in a row of their color. For the lines between levels, the diagonals are not taken in account.",
+            "ppl_code_file_path": "game_desc_codes/tictactoe3d.txt"
+        },
+        {
+            "id": 2,
+            "name": "Bolotudu",
+            "description": "6x6 grid. Twelve pieces per player. In the first phase, players alternate turns placing their pieces on an empty space on the board. They are forbidden from placing two of their own pieces orthogonally adjacent to one another. Once all of the pieces are placed, players alternate turns moving the pieces in an orthogonal direction to an empty adjacent spot. When they place a piece so that two are in a row, they capture one of the opponent's pieces. The player who captures all of the opponent's pieces wins.",
+            "ppl_code_file_path": "game_desc_codes/bolotudu.txt"
+        },
+        {
+            "id": 3,
+            "name": "Alquerque de Tres",
+            "description": "3x3 intersecting lines, with diagonal lines of the board. Three pieces per player. players alternate turns placing a piece on one of the empty spots. The player who places their pieces in a line wins.",
+            "ppl_code_file_path": "game_desc_codes/alquerquedetres.txt"
+        },
+        {
+            "id": 4,
+            "name": "Achi",
+            "description": "Two concentric squares with a line connecting their midpoints. Six pieces per player. Players alternate placing one of their pieces on the intersections of the lines. Whenever a player places three of their pieces in a row, they may remove one of the opponent's pieces from the board. Once all of the pieces are placed, players may take turns moving a piece to an adjacent point along the lines, attempting to place three of their pieces in a row. When one player is reduced to two pieces, that player loses.",
+            "ppl_code_file_path": "game_desc_codes/achi.txt"
+        },
+        {
+            "id": 5,
+            "name": "Boxijn Barildaan",
+            "description": "Four squares, arranged in a cross shape. The game is played along the lines. Four pieces per player, which begin on the corners of a square, opposite the square where the opponent's pieces are arranged. Players alternate turns moving their pieces. Pieces move three spaces along the lines on the board, capturing any piece on the third. The first two spaces in the move must be empty. Pieces may change direction in a turn, as long as the lines are followed and there is no backtracking. The player who captures all of the opponent's pieces wins.",
+            "ppl_code_file_path": "game_desc_codes/boxijnbarildaan.txt"
+        },
+        {
+            "id": 6,
+            "name": "Buudal",
+            "description": "3x3 intersecting lines, with diagonals in the four squares formed. Six pieces per player. Players alternate turns placing one of their pieces on the board. when all of the pieces have been placed, players alternate turns moving a piece by jumping over an adjacent spot to the next spot, along the lines of the board, which must be empty. If an opponent's piece is in the spot which was jumped, that piece is captured. The player who captures all of the opponent's pieces wins.",
+            "ppl_code_file_path": "game_desc_codes/buudal.txt"
+        },
+        {
+            "id": 7,
+            "name": "Dig Dig",
+            "description": "Three concentric squares, with lines connecting the corners and midpoints of the squares. Two players. Players alternate turns placing one of their pieces on one of the spots on the board. A player may place a piece on top of a piece belonging to their opponent during this phase of the game, and they are both canceled out. When three uncanceled pieces form a row along the lines on the board, the player may capture one of the opponent's pieces. Once all of the spots have been occupied, the canceled pieces are removed. Players alternate turns moving one of their pieces to an empty adjacent spot on the board.The player who captures all of the opponent's pieces wins.",
+            "ppl_code_file_path": "game_desc_codes/digdig.txt"
+        },
+        {
+            "id": 8,
+            "name": "Do Guti",
+            "description": "A square, with diagonals, but one side of the square has been removed. Two pieces per player. Players alternate turns placing a piece on an empty spot on the board. When the pieces are placed, players alternate turns moving one of their pieces to an empty adjacent spot along the lines. The player who blocks the other from being able to move wins.",
+            "ppl_code_file_path": "game_desc_codes/doguti.txt"
+        },
+        {
+            "id": 9,
+            "name": "Djara-Badakh",
+            "description": "3x3 intersecting lines. Three pieces per player. Players alternate turns placing a piece on an empty spot on the board. When all of the pieces are placed, players alternate turns moving a piece to an empty adjacent spot. The first player to place their three pieces along one of the lines wins.",
+            "ppl_code_file_path": "game_desc_codes/djarabadakh.txt"
+        },
+        {
+            "id": 10,
+            "name": "Dorvon Cag",
+            "description": "A circle, with four points equally spaced along the circumference, as well as a point in the center. A diameter is drawn between two of the outer points and through the center. Two players. Two pieces per player. Players alternate turns placing a piece on the board. When all of the pieces are placed, players alternate turns moving a piece to an empty adjacent point along the lines. The player who blocks the other player from being able to move wins.",
+            "ppl_code_file_path": "game_desc_codes/dorvoncag.txt"
+        },
+        {
+            "id": 11,
+            "name": "Driesticken",
+            "description": "3x3 intersecting lines. Three pieces per player. Players alternate turns placing pieces on an empty spot on the board. When all pieces are placed, players alternate turns moving a piece to any empty spot on the board. The first player to place their pieces in an orthogonal row along the lines wins.",
+            "ppl_code_file_path": "game_desc_codes/driesticken.txt"
+        },
+        {
+            "id": 12,
+            "name": "El-Mthaltha",
+            "description": "3x3 intersecting lines, with diagonals in the square. Three pieces per player, which begin on opposite sides of the square. Players alternate turns moving one of their pieces along the lines of the board. When a player surrounds one of the opponent's pieces with two of their pieces, the opponent's piece is captured. The player who captures all of the opponent's pieces wins.",
+            "ppl_code_file_path": "game_desc_codes/elmthaltha.txt"
+        },
+        {
+            "id": 13,
+            "name": "Engijn Zirge",
+            "description": "3x3 intersecting lines, with diagonals. Three pieces per player. Players alternate turns placing pieces on the board. Once all of the pieces have been placed, the players alternate turns moving a piece to an empty adjacent spot on the board. The first player to place their pieces in a row along one of the lines wins.",
+            "ppl_code_file_path": "game_desc_codes/engijnzirge.txt"
+        },
+        {
+            "id": 14,
+            "name": "Epelle",
+            "description": "3x3 intersecting lines with diagonals. Play occurs on the intersections of the lines. Players each have three pieces, initially placed on the sides closest to the player. Players move the pieces to an adjacent unoccupied intersection along the lines. The goal is to make three in a row which cannot be in the starting position.",
+            "ppl_code_file_path": "game_desc_codes/epelle.txt"
+        },
+        {
+            "id": 15,
+            "name": "Fanorona Telo",
+            "description": "3x3 intersecting lines with diagonals. Play occurs on the intersections of the lines. Each player has three pieces. Play begins with each player placing pieces on empty points. If they make three in a row along the lines, they win. Once all pieces are placed, players take turns moving pieces one spot to an adjacent point along the lines trying to make three in a row.",
+            "ppl_code_file_path": "game_desc_codes/fanoronatelo.txt"
+        },
+        {
+            "id": 16,
+            "name": "Janes Soppi",
+            "description": "3x3 intersecting lines, with triangles extending on opposite ends of the large square and the central line extending to the apices. One player plays as the notched stick, called the hare, and the other as three sharp sticks, known as the hounds. Players alternate turns placing a piece on the board. When a player has placed all of their pieces on the board, they move one of their pieces to an empty adjacent spot along the lines. When the hounds block the hare from being able to move, the hounds win.",
+            "ppl_code_file_path": "game_desc_codes/janessoppi.txt"
+        },
+        {
+            "id": 17,
+            "name": "Jeson Zam",
+            "description": "Two triangles, which form a six-pointed star, with lines connecting the corner of one triangle with the corner of the other triangle which is opposite it. Nine pieces per player. Players alternate turns placing a piece on an empty point on the board. Players cannot place a piece in the central point during this phase. When all of the pieces are placed, players alternate turns moving a piece to an empty adjacent point on the board. During either phase, when a player places three of their pieces in a row, they remove one of the opponent's pieces. When three pieces are in a three-in-a-row pattern, they cannot be removed. The player who removes all of the opponent's pieces from the board wins.",
+            "ppl_code_file_path": "game_desc_codes/jesonzam.txt"
+        },
+        {
+            "id": 18,
+            "name": "Katsela",
+            "description": "Three intersecting lines, with diagonals drawn in the square. Two players. Three pieces per player, one playing as red and the other as white. The red player plays first and places their piece in the central spot. Players alternate turns placing one of their pieces on an empty space on the board. When all of the pieces are placed, players alternate turns moving one of their pieces to an empty adjacent spot on the board along the lines. The first player to place three of their pieces in a row wins.",
+            "ppl_code_file_path": "game_desc_codes/katsela.txt"
+        },
+        {
+            "id": 19,
+            "name": "La Chascona",
+            "description": "Three concentric squares, with lines connecting the midpoints of the sides. Nine pieces per player. Players alternate turns placing a piece on the board. When a player places three of their pieces in a line of three along one of the lines on the board, they capture one of the opponent's pieces. When all of the pieces have been placed, players alternate turns moving one of their pieces to an adjacent empty spot on the board. Players cannot capture one of their opponent's pieces which is in a three-in-a-row alignment. The player who either captures seven of their opponent's pieces or blocks the opponent from being able to move wins.",
+            "ppl_code_file_path": "game_desc_codes/lachascona.txt"
+        },
     ]
 }
