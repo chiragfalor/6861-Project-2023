@@ -1,0 +1,32 @@
+(define "Line3D" 
+    (!= 0 
+        (count Sites
+            in:(forEach 
+                (expand (sites Bottom) steps:(- <Board:size> 1))
+                if:(all Sites <Board:3dSites>
+                    if:(= (mover) (who at:(site)))
+                )
+            )
+        )
+    )
+)
+
+//------------------------------------------------------------------------------
+
+(game "3D Tic-Tac-Toe"
+    (players 2)
+    (equipment {
+        (board (rectangle (+ (^ <Board:size> 2) (- <Board:size> 1)) <Board:size>))
+        (piece "Disc" P1)
+        (piece "Cross" P2)
+        (piece "Dot" Neutral)
+    })
+    (rules
+        (start (place "Dot0" <Board:dot0>)) // Places neutral dots to separate the four levels of the board.
+        (play (move Add (to (sites Empty))))
+        (end {
+            (if (is Line <Board:size>) (result Mover Win))
+            (if "Line3D" (result Mover Win))
+        })
+    )
+)
