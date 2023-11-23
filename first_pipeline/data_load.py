@@ -16,3 +16,8 @@ def load_games():
         
     return games
 
+def load_system_prompt():
+    with open('system_prompt.txt') as f:
+        system_prompt = f.read()
+    return system_prompt
+

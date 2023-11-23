@@ -119,6 +119,6 @@
             "name": "La Chascona",
             "description": "Three concentric squares, with lines connecting the midpoints of the sides. Nine pieces per player. Players alternate turns placing a piece on the board. When a player places three of their pieces in a line of three along one of the lines on the board, they capture one of the opponent's pieces. When all of the pieces have been placed, players alternate turns moving one of their pieces to an adjacent empty spot on the board. Players cannot capture one of their opponent's pieces which is in a three-in-a-row alignment. The player who either captures seven of their opponent's pieces or blocks the opponent from being able to move wins.",
             "ppl_code_file_path": "game_desc_codes/lachascona.txt"
-        },
+        }
     ]
 }
