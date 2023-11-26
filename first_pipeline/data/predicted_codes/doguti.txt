@@ -1,0 +1,26 @@
+(game "Do Guti"
+    (players 2)
+    
+    (equipment {
+        ("HexBoard" 5 5)
+        (hand Each)
+        (piece "Marker" Each ("StepToEmpty"))
+    })
+    
+    (rules
+        (start (place "Marker" "Hand" count:2))
+        
+        phases: {
+        (phase "Placement"
+            (play (move (from (handSite Mover)) (to (sites Empty))))
+            (nextPhase ("HandEmpty" P2) "Movement")
+        )
+        
+        (phase "Movement"
+            (play (move (from (sites Occupied by:Mover)) (to (sites Empty))))
+            (end (if (all Moves (can CaptureTo (to) by:Opponent)) (result Mover Win)))
+        )
+        }
+        
+    )
+)

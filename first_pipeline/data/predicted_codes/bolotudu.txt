@@ -1,0 +1,62 @@
+(define "IsOrthogonallyAdjacent" 
+    (or 
+        (is SamePoint Vertical)
+        (is SamePoint Horizontal)
+    )
+)
+
+(define "PhasePlacementMove"
+    (if (is EnemyNeighbor
+            (union (union (sites Orthogonal to) (sites OrthogonalOrthogonal to)) (sites Diagonal to))
+        )
+        (invalid "Cannot place two of your own pieces adjacent to each other.")
+        (move
+            (from (handSite Mover))
+            (to (sites Empty))
+            (then ("ReplayIfLine2" Orthogonal exact:True))
+        )
+    )
+)
+
+(define "PhaseMovementMove" 
+    (move
+        (from (last To))
+        (to (sites Empty))
+        (then ("ReplayIfLine2" Orthogonal exact:True))
+        (then ("CaptureIfLine2" Orthogonal exact:True))
+    )
+)
+
+(game "Bolotudu"
+    (players 2)
+    (equipment {
+        (board (rectangle 6 6) use:Vertex)
+        (hand Each)
+        (piece "Marker" Each)
+    })
+    (rules
+        (start (place "Marker" "Hand" count:12))
+        
+        phases:{
+        (phase "Placement"
+            (play 
+                (if "SameTurn"
+                    "PhasePlacementMove"
+                    (forEach Site (sites Hand) ("PhasePlacementMove"))
+                )
+            )
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        )
+        (phase "Movement"
+            (play 
+                (if "SameTurn"
+                    "PhaseMovementMove"
+                    (forEach Piece ("PhaseMovementMove"))
+                )
+            )
+        )
+        }
+        
+        (end ("CaptureAll" Next))
+    )
+)

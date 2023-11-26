@@ -1,0 +1,15 @@
+(game "Epelle"
+    (players 2) 
+    (equipment {
+        ("AlquerqueBoard" 3 3)
+        (piece "Marker" Each ("StepToEmpty"))
+    }) 
+    (rules 
+        (start {
+            (place "Marker1" (sites Bottom))
+            (place "Marker2" (sites Top))
+        })
+        (play (forEach Piece))
+        (end ("Line3Win") ~("AtStartingPosition"))
+    )
+)

@@ -13,7 +13,7 @@ def load_games():
         # load description
         with open(f'data/{game_code_path}') as f:
             code = f.read()
-        games.append(GameModel(game['name'], game['description'], code))
+        games.append(GameModel(game['name'], game['description'], code, game_code_path))
         
     return games
 

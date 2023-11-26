@@ -14,9 +14,11 @@ class TextToCode:
         return f"Text: {self.text}\nCode: {self.code}"
 
 class GameModel(TextToCode):
-    def __init__(self, name, description, ppl_code) -> None:
+    def __init__(self, name, description, ppl_code, code_file_path=None) -> None:
         super().__init__(description, ppl_code)
         self.name = name
+        if code_file_path:
+            self.code_file_path = code_file_path
     
     @property
     def description(self):

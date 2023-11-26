@@ -1,0 +1,20 @@
+(game "El-Mthaltha"
+    (players 2) 
+    
+    (equipment { 
+        ("AlquerqueBoard" 3 3)
+        (hand P1)
+        (hand P2)
+        (piece "Marker" P1 "StepToEmpty")
+        (piece "Marker" P2 "StepToEmpty")
+    }) 
+    
+    (rules 
+        (start 
+            (place "Marker1" (intersection (sites Right) (sites MiddleTop))) 
+            (place "Marker2" (intersection (sites Left) (sites MiddleBottom)))
+        )
+        (play (move (from (sites Next)) (to (sites Empty))))
+        (end ("CaptureAll" P1))
+    )
+)

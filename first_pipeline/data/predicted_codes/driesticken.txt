@@ -1,0 +1,28 @@
+(game "Driesticken"
+    (players 2)
+    (equipment {
+        ("AlquerqueBoard" 3 3)
+        (hand Each)
+        (piece "Marker" Each ("StepToEmpty"))
+    })
+    (rules 
+        (start (place "Marker" "Hand" count:3))
+        
+        phases:{
+        (phase "Placement" 
+            (play 
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty))
+                )
+            ) 
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        ) 
+        
+        (phase "Movement" 
+            (play (move "Marker" "Empty"))
+        )}
+        
+        (end (if ("OrthogonalRowWin") (result Mover Win)))
+    )
+)

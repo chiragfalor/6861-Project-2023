@@ -1,0 +1,40 @@
+(define "MoveBoxijn" 
+    (move Hop3 
+        (between 
+            if:True
+            (apply (and 
+                ("IsEmptyAt" (between 0 1)) 
+                (is EnemyPiece (between 2))
+                (apply (remove (between 2)))
+            ))
+        ) 
+        (to
+            if:True
+            (is Empty (to))
+        )
+        if:(= 3 (distance (between)))
+    )
+)
+
+(game "Boxijn Barildaan" 
+    (players 2)
+    
+    (equipment { 
+        (board (cross 4) use:Edge)
+        (hand Each)
+        (piece "Marker" Each 
+            ("MoveBoxijn" ~ 
+                (then ("ReplayIfLine4")) 
+            ) 
+        )
+    }) 
+    
+    (rules 
+        (start {
+            (place "Marker1" (sites PlayerSide))
+            (place "Marker2" (sites OpponentSide))
+        })
+        (play (forEach Piece))
+        (end ("CaptureAll" Next))
+    )
+)

@@ -1,0 +1,53 @@
+(define "RemoveEnemyPiece" 
+    (if (can Move ("RemoveAnyEnemyPieceNotInLine3" Orthogonal) )
+        ("RemoveAnyEnemyPieceNotInLine3" Orthogonal) 
+        ("RemoveAnyEnemyPiece")
+    )
+)
+
+(game "Jeson Zam"
+    (players 2)
+    
+    (equipment { 
+        ("StarBoard")
+        (hand Each)
+        (piece "Marker" Each 
+            ("StepToEmpty" ~
+                (then ("ReplayIfLine3" Orthogonal exact:True))
+            )
+        ) 
+    }) 
+    (rules 
+        (start
+            (place "Marker1" (sites (point Bottom)))
+            (place "Marker2" (sites (point Top)))
+        )
+        
+        phases:{
+        (phase "Placement"
+            (play 
+                (if "SameTurn" 
+                    "RemoveEnemyPiece"
+                    (move 
+                        (from (handSite Mover)) 
+                        (to (sites Empty not:(point Centre))) 
+                        (then ("ReplayIfLine3" Orthogonal exact:True))
+                    ) 
+                )
+            )
+            (nextPhase "Moving")
+        )
+        
+        (phase "Moving" 
+            (play 
+                (if "SameTurn"
+                    "RemoveEnemyPiece"
+                    (forEach Piece)
+                )
+            )
+        )
+        }
+        
+        (end (if (or (no Moves Next) (<= (count Pieces Next) 2)) (result Mover Win))) 
+    )
+)

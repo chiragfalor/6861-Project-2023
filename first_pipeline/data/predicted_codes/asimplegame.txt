@@ -1,0 +1,13 @@
+(game "A Simple Game"
+    (players 2)
+    (equipment {
+        ("ChameleonBoard" 4 4)
+        (hand Each)
+        (piece "Stone" Each ("StepToEmpty"))
+    })
+    (rules
+        (start (place "Stone" "Hand" count:3))
+        (play (forEach Piece))
+        (end ("Line3Win"))
+    )
+)

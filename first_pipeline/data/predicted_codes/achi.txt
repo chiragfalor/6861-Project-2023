@@ -1,0 +1,15 @@
+(game "Achi"
+    (players 2)
+    (equipment {
+        (board (concentric Square rings:2 joinCorners:False) use:Vertex)
+        (hand Each)
+        (piece "Disc" Each ("StepToEmpty" Orthogonal "IfLine3RemoveOpponentPiece"))
+    })
+    (rules
+        (start (place "Disc" "Hand" count:6))
+        
+        (play (forEach Piece))
+        
+        (end (if (<= (count Pieces Next) 2) (result Next Loss)))
+    )
+)

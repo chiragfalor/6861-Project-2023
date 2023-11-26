@@ -1,0 +1,29 @@
+(game "Dorvon Cag"
+    (players 2) 
+    (equipment { 
+        (board (circle 6) use:Vertex) 
+        (piece "Marker" Each ("StepToEmpty")) 
+        (hand Each)
+    }) 
+    (rules 
+        (start (place "Marker" "Hand" count:2))
+
+        phases:{
+        (phase "Placement"
+            (play (move (from (handSite Mover)) (to (sites Empty))))
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        )
+
+        (phase "Movement" 
+            (play (forEach Piece))
+        )
+        }
+
+        (end
+            (if ("Blocked" Prev)
+                (result Prev Win)
+                (result Next Win)
+            )
+        )
+    )
+)
