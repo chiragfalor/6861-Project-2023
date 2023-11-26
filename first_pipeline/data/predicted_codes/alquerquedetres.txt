@@ -1,18 +1,12 @@
 (game "Alquerque de Tres"
-    (players 2) 
+    (players 2)
     (equipment {
-        ("AlquerqueBoard" 3 3 diagonals:Solid)
-        (piece "Marker" Each "StepToEmpty")
-    }) 
-    (rules 
-        (start (place "Marker" "Hand" count:3))
-        
-        phases:{
-        (phase "Placement"
-            (play (move (from (handSite Mover)) (to (sites Empty))))
-            (nextPhase ("HandEmpty" P2))
-        )
-        }
-        (end ("LineWin"))
+        (board (square 3 diagonals:Solid) use:Vertex)
+        (piece "Marker" Each)
+    })
+    (rules
+        (start (place "Marker" (sites Empty) count:3))
+        (play (forEach Piece))
+        (end ("Line3Win"))
     )
 )

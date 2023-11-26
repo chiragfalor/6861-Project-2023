@@ -1,65 +1,31 @@
-(define "HoundBlock"
-    (forall Sites
-        (is Empty (site))
-        if: (isNull ("FindAdjacentEmptySpot" (site)))
-            (and
-                (is In (site) (sites Board))
-                (is In (Hare) (sites Adjacent to:(site)))
-            )
-    )
-)
-
-(define "FindAdjacentEmptySpot"
-    (forEach Site (sites Adjacent to:(site))
-        if:(is Empty (site))
-            (site)
-    )
-)
-
-(define "MoveHare"
-    (move Step 
-        #1 
-        (to "FindAdjacentEmptySpot" (last From))
-        (then 
-            (if "HoundBlock"
-                (result Hounds Win)
-                (is In (Hare) (sites FinalHarePosition))
-            )
-        )
-    )
-)
-
-(define "MoveHounds"
-    (move Step
-        #1
-        (to "FindAdjacentEmptySpot" (last From))
-    )
-)
-
-#-------------------------------------------------------------------------
-
 (game "Janes Soppi"
     (players 2)
     (equipment {
-        (board (rectangle 3 3))
-        (piece "Hound" P1 ("MoveHounds"))
-        (piece "Hare" P2 ("MoveHare"))
+        ("AlquerqueBoard" 3 3)
+        (hand P1)
+        (piece "Hare" P1 ("StepToEmpty"))
+        (hand P2)
+        (piece "Hound" P2 ("StepToEmpty"))
     })
     (rules
-        (start {
-            (place Stack "Hound1" (sites C1 R1 R3 L3 T2 B2))
-            (place Stack "Hound2" (sites T1 L1 L3 B3 C2))
-            (place Stack "Hound3" (sites C1 R3 T2 B2 C2))
-            (place "Hare" C2)
-        })
-        (play 
-            (if "SameTurn"
-                ("MoveHounds")
-                (if ("PlayerHasPieces" P2)
-                    ("MoveHare")
-                    ("MoveHounds")
-                )
+        (start (union (sites Top) (sites Bottom)))
+
+        (play {
+            (if (available (hand Mover))
+                (move (from (handSite Mover)) (to (sites Empty)))
             )
-        )
+            (if
+                (and
+                    (= (handCount Mover) 0)
+                    (available (singlePiece (mover Opponent))))
+                (move (from (singlePieceSite (mover Opponent))) (to (sites Empty)))
+            )
+        })
+
+        (end {
+            (if (exists (adjacentEmpty (singlePieceSite (mover P1))))
+                (result P2 Win)
+            )
+        })
     )
 )

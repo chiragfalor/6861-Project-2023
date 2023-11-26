@@ -1,15 +1,54 @@
+(define "RemoveEnemyPiece"
+    (move Remove
+        (forEach
+            (sites Occupied by:Next container:"Board")
+            if:(is Line 3)
+        )
+    )
+)
+
+(define "TwoPiecesRemaining"
+    (and
+        (is Empty (sites Occupied by:Mover))
+        (is Empty (sites Occupied by:Next))
+        (is Any (sites Occupied by:Mover))
+        (is Any (sites Occupied by:Next))
+    )
+)
+
+(define "OtherPlayerWinner"
+    (then
+        (if ("TwoPiecesRemaining" Mover) (result Next Win))
+    )
+)
+
+//------------------------------------------------------------------------------
+
 (game "Achi"
     (players 2)
     (equipment {
-        (board (concentric Square rings:2 joinCorners:False) use:Vertex)
+        (board
+            (merge {
+                (rectangle 3 3)
+                (shift 1.5 1.5 (line 1 1 -1 -1))
+            })
+            use:Vertex
+        )
         (hand Each)
-        (piece "Disc" Each ("StepToEmpty" Orthogonal "IfLine3RemoveOpponentPiece"))
+        (piece "Marker" Each
+            (move (from (handSite Mover)) (to (sites Empty)) (then ("RemoveEnemyPiece" if:(is Line 3))))
+            ("StepToEmpty")
+        )
     })
     (rules
-        (start (place "Disc" "Hand" count:6))
-        
-        (play (forEach Piece))
-        
-        (end (if (<= (count Pieces Next) 2) (result Next Loss)))
+        (start (place "Marker" "Hand" count:6))
+        phases: {
+            (phase "Placement"
+                (play (move (from (handSite Mover)) (to (sites Empty))))
+                (nextPhase Mover ("HandEmpty" Mover) "Movement")
+            )
+            ("PhaseMovePiece" "Movement")
+        }
+        (end ("OtherPlayerWinner"))
     )
 )

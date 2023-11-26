@@ -2,11 +2,10 @@
     (players 2) 
     
     (equipment { 
-        ("AlquerqueBoard" 3)
+        ("AlquerqueBoard" 3 3)
         (hand Each)
-        (piece "Marker" Each ("StepToEmpty"))
-    })
-    
+        (piece "Marker" Each "StepToEmpty")
+    }) 
     (rules 
         (start (place "Marker" "Hand" count:3))
         
@@ -16,7 +15,14 @@
             (nextPhase Mover ("HandEmpty" Mover) "Movement")
         )
         
-        ("PhaseMovePiece" "Movement")
+        (phase "Movement" 
+            (play 
+                (if ("SameTurn" ("Line3"))
+                    ("RemoveAnyEnemyPiece")
+                    ("StepToEmpty" Orthogonal)
+                )
+            )
+        )
         }
         
         (end ("Line3Win"))

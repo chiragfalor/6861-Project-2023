@@ -1,30 +1,42 @@
 (game "La Chascona"
     (players 2)
     (equipment {
-        (board
-            (remove (concentric {1 3}) edges:{{1 0} {0 2}})
-            use:Vertex
-        )
+        (board (concentric Square rings:3 joinMidpoints:True) use:Vertex)
         (hand Each)
-        (piece "Marker" Each
-            (move Hop (between (sites Empty)) (to (sites Empty)))
-            (adjacent 
-                if:(= (mover) (who at:(to))) 
-                (remove (to))
-            )
-        )
+        (piece "Marker" Each ("StepToEmpty" ~ ("CaptureIfLine3" Orthogonal 1) ("CannotCaptureIfLine3" Orthogonal 3)))
     })
     (rules
         (start (place "Marker" "Hand" count:9))
-        
-        (play (forEach Piece))
-        
-        (end
-            (if (>= (opponent (captureCount Mover)) 7) (result (opponent Mover) Win))
-            (if (is Line 3) (if (not (is Line3InLine2Alignment)))
-                (move Remove (sites At Line3))
+
+        phases:{
+        (phase "Placement"
+            (play
+                (if "SameTurn"
+                    ("RemoveAnyEnemyPiece")
+                    (move
+                        (from (handSite Mover))
+                        (to (sites Empty))
+                        (then ("CaptureIfLine3" Orthogonal 3))
+                        (then ("CannotCaptureIfLine3" Orthogonal 1))
+                    )
+                )
             )
-            (if (is All Pieces (is Empty (adjacentSites Each))))        
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
         )
+
+        (phase "Movement"
+            (play
+                (if "SameTurn"
+                    ("RemoveAnyEnemyPiece")
+                    (forEach Piece)
+                )
+            )
+            (end
+                (if (>= (count Pieces Opponent) 7)
+                    (result Mover Win)
+                )
+            )
+        )
+        }
     )
 )

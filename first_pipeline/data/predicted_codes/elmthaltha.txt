@@ -1,20 +1,33 @@
 (game "El-Mthaltha"
-    (players 2) 
-    
-    (equipment { 
-        ("AlquerqueBoard" 3 3)
-        (hand P1)
-        (hand P2)
-        (piece "Marker" P1 "StepToEmpty")
-        (piece "Marker" P2 "StepToEmpty")
-    }) 
-    
-    (rules 
-        (start 
-            (place "Marker1" (intersection (sites Right) (sites MiddleTop))) 
-            (place "Marker2" (intersection (sites Left) (sites MiddleBottom)))
+    (players 2)
+    (equipment {
+        (board (square 3 diagonals:Solid) use:Vertex)
+        (piece "Marker" Each ("StepToEmpty"))
+        (regions P1 (sites Right))
+        (regions P2 (sites Left))
+    })
+    (rules
+        (start {
+            (place "Marker1" (sites P1) count:3)
+            (place "Marker2" (sites P2) count:3)
+        })
+        
+        (play
+            (move 
+                (from (sites Mover))
+                (to (sites Empty))
+                (then 
+                    (if 
+                        (exists (sites (between (from) (to))))
+                        (remove 
+                            (sites (between (from) (to)))
+                            if:(is In (site) Opponent)
+                        )
+                    )
+                )
+            )
         )
-        (play (move (from (sites Next)) (to (sites Empty))))
-        (end ("CaptureAll" P1))
+        
+        (end ("CaptureAll"))
     )
 )

@@ -1,32 +1,30 @@
-(define "Line3WinIgnoreDiagonals" 
-    (or 
-        (is Line 3 Orthogonal) 
-        (is Line 3 InPlane)
-        (is Line 3 AcrossPlanes)
-    )
-)
-
-//------------------------------------------------------------------------------
-
 (game "3D Tic Tac Toe"
-    (players 2) 
+    (players 2)
     (equipment {
-        (board (cuboid 3 3 3) use:Vertex)
+        (board (rectangular3D 3 3 3))
         (hand Each)
-        (piece "X" P1)
-        (piece "O" P2)
-    }) 
-    (rules 
-        (start (place "X" "Hand" count:1) (place "O" "Hand" count:1))
+        (piece "X" P1 "StepToEmpty")
+        (piece "O" P2 "StepToEmpty")
+    })
+    (rules
+        (start (place "X" "Hand" count:1))
+        
         (play 
-            (if "SameTurn" 
+            (if "SameTurn"
                 (move 
-                    (from (handSite Mover)) 
+                    (from (handSite Mover))
                     (to (sites Empty))
-                    (then ("Line3WinIgnoreDiagonals" exact:True))
                 )
             )
         )
-        (end ("Line3WinIgnoreDiagonals"))
+        
+        (end 
+            (or 
+                ("Line3HorizontalWin")
+                ("Line3VerticalWin")
+                ("Line3DepthWin")
+                ("Line3DiagonalWin")
+            )
+        )
     )
 )

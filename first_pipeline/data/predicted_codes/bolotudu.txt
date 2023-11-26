@@ -1,61 +1,71 @@
-(define "IsOrthogonallyAdjacent" 
-    (or 
-        (is SamePoint Vertical)
-        (is SamePoint Horizontal)
-    )
-)
-
-(define "PhasePlacementMove"
-    (if (is EnemyNeighbor
-            (union (union (sites Orthogonal to) (sites OrthogonalOrthogonal to)) (sites Diagonal to))
-        )
-        (invalid "Cannot place two of your own pieces adjacent to each other.")
-        (move
-            (from (handSite Mover))
-            (to (sites Empty))
-            (then ("ReplayIfLine2" Orthogonal exact:True))
+(define "CaptureOpponentPiece"
+    (move Remove
+        (between 
+            if:(and 
+                (is In (to) (union (sites Occupied by:Next) (sites Empty)))
+                (is In (to) (sites Board))
+            )
+            (to (site))
         )
     )
 )
 
-(define "PhaseMovementMove" 
-    (move
-        (from (last To))
-        (to (sites Empty))
-        (then ("ReplayIfLine2" Orthogonal exact:True))
-        (then ("CaptureIfLine2" Orthogonal exact:True))
+(define "ValidPlacement"
+    (if 
+        (exists "Marker" 
+            (union 
+                (intersection 
+                    (sites Occupied by:P1) 
+                    (union (sites Top) (sites Bottom))
+                )
+                (intersection 
+                    (sites Occupied by:P2) 
+                    (union (sites Left) (sites Right))
+                )
+            )
+        ) 
+        False 
+        True
     )
 )
 
 (game "Bolotudu"
     (players 2)
+    
     (equipment {
-        (board (rectangle 6 6) use:Vertex)
+        (board (square 6) use:Vertex)
         (hand Each)
-        (piece "Marker" Each)
+        (piece "Marker" Each
+            ("StepToEmpty" Orthogonal)
+        )
     })
+    
     (rules
         (start (place "Marker" "Hand" count:12))
         
         phases:{
         (phase "Placement"
-            (play 
-                (if "SameTurn"
-                    "PhasePlacementMove"
-                    (forEach Site (sites Hand) ("PhasePlacementMove"))
+            (play
+                (if ("ValidPlacement")
+                    (move 
+                        (from (handSite Mover))
+                        (to (sites Empty))
+                    )
+                    (message "Invalid placement. Please try again.")
                 )
             )
             (nextPhase Mover ("HandEmpty" Mover) "Movement")
         )
+        
         (phase "Movement"
-            (play 
-                (if "SameTurn"
-                    "PhaseMovementMove"
-                    (forEach Piece ("PhaseMovementMove"))
+            (play
+                (move
+                    (from (sites Occupied by:Player))
+                    (to (sites Empty))
+                    ("CaptureOpponentPiece")
                 )
             )
-        )
-        }
+        )}
         
         (end ("CaptureAll" Next))
     )

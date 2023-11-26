@@ -1,24 +1,18 @@
 (game "Buudal"
-    (players 2)
-    (equipment {
+    (players 2) 
+    (equipment { 
         ("AlquerqueBoard" 3 3)
         (hand Each)
-        (piece "Marker" Each ("JumpMove" Orthogonal "CapturePiece"))
-    })
-    (rules
+        (piece "Marker" Each ("CaptureJump" Orthogonal))
+    }) 
+    (rules 
         (start (place "Marker" "Hand" count:6))
-        
-        phases:{
-        (phase "Placement"
-            (play (move (from (handSite Mover)) (to (sites Empty))))
-            (nextPhase ("HandEmpty" P2) "Movement")
+        (play 
+            (if "SameTurn"
+                ("CaptureJump" Orthogonal)
+                (move (from (handSite Mover)) (to (sites Empty)))
+            )
         )
-        
-        (phase "Movement"
-            (play (move (from (sites Occupied by:Mover)) (to (sites Empty))))
-        )
-        }
-        
         (end ("CaptureAll" Next))
     )
 )

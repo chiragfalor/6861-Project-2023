@@ -1,21 +1,13 @@
 (game "Djara-Badakh"
-    (players 2) 
+    (players 2)
     (equipment {
-        (board (square 3) use:Vertex)
+        ("AlquerqueBoard" 3 3)
         (hand Each)
-        (piece "Marker" Each (move (from) (to "Orthogonal")))
-    }) 
-    (rules 
+        (piece "Marker" Each ("StepToEmpty"))
+    })
+    (rules
         (start (place "Marker" "Hand" count:3))
-        
-        phases:{
-        (phase "Placement"
-            (play (move (from (handSite Mover)) (to (sites Empty))))
-            (nextPhase ("HandEmpty" P2) "Movement")
-        )
-        
-        ("PhaseMovePiece" "Movement")
-        }
-        (end ("Line3Win" All))
+        (play (forEach Piece))
+        (end ("Line3Win"))
     )
 )

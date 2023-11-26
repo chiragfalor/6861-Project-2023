@@ -1,31 +1,26 @@
 (game "Katsela"
     (players 2)
-    (equipment {
-        (board (square 3 diagonals:Solid) use:Vertex)
-        (hand "White" "Red")
-        (piece "WhitePiece" White)
-        (piece "RedPiece" Red)
-    })
-    (rules
-        (start {
-            (place "RedPiece1" (intersection (sites X1) (sites Y1)))
-        })
-        (play {
-            ("PlacePiece" "Red" "RedPiece")
-            ("PlacePiece" "White" "WhitePiece")
-        })
-        (end ("Line3Win"))
-    )
-)
-
-<Rule>
-(rule "PlacePiece"
-    (player "Player")
-    (piece "Piece")
-    (play
-        (move 
-            (from (handSite Player Piece))
-            (to (sites Empty))
+    
+    (equipment { 
+        ("AlquerqueBoard" 3 3) 
+        (hand Each)
+        (piece "Red" P1 ("StepToEmpty"))
+        (piece "White" P2 ("StepToEmpty"))
+    }) 
+    
+    (rules 
+        (start (place "Red1" (site 1 1)))
+        
+        (play 
+            (if "SameTurn"
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty)) 
+                ) 
+                (forEach Piece)
+            )
         )
+        
+        (end ("Line3Win"))
     )
 )

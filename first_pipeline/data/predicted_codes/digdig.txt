@@ -1,59 +1,42 @@
-(define "PlaceOrCancelPiece" 
-    (play 
-        (if "SameMover" 
-            (move (from (handSite Mover)) (to (sites Empty))) 
-            (move Remove (sites (sites Occupied by:Next))) 
-        )
-    )
-)
-
-//------------------------------------------------------------------------------
-
 (game "Dig Dig"
-    (players 2) 
-    
-    (equipment { 
-        (board 
-            (merge { 
-                (rectangle 3 3)
-                (shift 0.5 0.5 (rectangle 2 2))
-                (rotate 45 (rectangle 1 1))
-            }) 
+    (players 2)
+    (equipment {
+        (board
+            (mode "CaptureStackedPieces" True)
+            (rectangle 3 3)
+            (lines {
+                (line (points 1 4))
+                (line (points 2 5))
+                (line (points 3 6))
+                (line (points 1 2 3))
+                (line (points 4 5 6))
+                (line (points 7 8 9))
+                (line (points 1 5 9))
+                (line (points 3 5 7))
+            })
             use:Vertex
         )
         (hand Each)
-        (piece "Marker" Each
-            (if "InitPhase"
-                (then 
-                    (if (is Empty (site)) 
-                        (place Piece at:(site))
-                        (remove (site))
-                    )
-                )
-                ("StepToEmpty")
-            )
-        )
-    }) 
-    
-    (rules 
-        (start {"InitPhase" (#= (count Pieces Next) 6)})
+        (piece "Marker" Each "StepToEmpty")
+    })
+    (rules
+        (start (place "Marker" "Hand" count:9))
         
         phases:{
-        
         (phase "Placement"
-            ("PlaceOrCancelPiece")
+            (play 
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty)) 
+                    (then (remove (sites Occupied by:Next)))
+                )
+            )
             (nextPhase Mover ("HandEmpty" Mover) "Movement")
         )
         
         (phase "Movement"
-            (play 
-                (if "SameTurn"
-                    ("StepToEmpty")
-                    (forEach Piece)
-                )
-            )
+            (play (forEach Piece))
         )
-        
         }
         
         (end ("CaptureAll" Next))

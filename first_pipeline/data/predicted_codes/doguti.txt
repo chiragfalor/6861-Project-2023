@@ -1,26 +1,29 @@
 (game "Do Guti"
     (players 2)
-    
     (equipment {
-        ("HexBoard" 5 5)
+        (board 
+            (remove (rectangle 4 1) edges:{{0 3}}) 
+            diagonals:Solid
+            use:Vertex
+        )
         (hand Each)
-        (piece "Marker" Each ("StepToEmpty"))
+        (piece "Disc" Each ("StepToEmpty" Orthogonal))
     })
-    
-    (rules
-        (start (place "Marker" "Hand" count:2))
+    (rules 
+        (start (place "Disc" "Hand" count:2))
+        phases:{
+        (phase "Placement" 
+            (play 
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty))
+                )
+            ) 
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        ) 
         
-        phases: {
-        (phase "Placement"
-            (play (move (from (handSite Mover)) (to (sites Empty))))
-            (nextPhase ("HandEmpty" P2) "Movement")
-        )
-        
-        (phase "Movement"
-            (play (move (from (sites Occupied by:Mover)) (to (sites Empty))))
-            (end (if (all Moves (can CaptureTo (to) by:Opponent)) (result Mover Win)))
-        )
+        ("PhaseMovePiece" "Movement")
         }
-        
+        (end ("BlockWin"))
     )
 )

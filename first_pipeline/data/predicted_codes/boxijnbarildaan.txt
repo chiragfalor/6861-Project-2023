@@ -1,40 +1,62 @@
-(define "MoveBoxijn" 
-    (move Hop3 
-        (between 
-            if:True
-            (apply (and 
-                ("IsEmptyAt" (between 0 1)) 
-                (is EnemyPiece (between 2))
-                (apply (remove (between 2)))
-            ))
-        ) 
-        (to
-            if:True
-            (is Empty (to))
-        )
-        if:(= 3 (distance (between)))
-    )
+(define canMoveForward 
+    (or (is Empty "Ahead Forward") (is Empty "Step Forward"))
 )
 
-(game "Boxijn Barildaan" 
-    (players 2)
+(define canMoveSideways 
+    (or (is Empty "Right") (is Empty "Left"))
+)
+
+(define isCapturable 
+    (and (is Occupied "Ahead Forward Forward") (not (is Empty "Ahead Forward Forward")))
+)
+
+(define "CaptureIfCapturable" 
+    (if isCapturable (remove (ahead (ahead (my site)))))
+)
+
+(define "CanCapture" 
+    (or (isCapturable "Right") (isCapturable "Left"))
+)
+
+(define "CaptureIfCanCapture" 
+    (if (CanCapture) ("CapturePiece"))
+)
+
+(define "CanMoveForward" 
+    (or canMoveForward (isCapturable))
+)
+
+(define "CanMoveSideways" 
+    (and canMoveSideways (not (isCapturable)))
+)
+
+(define "CapturePiece" 
+    (remove (ahead (ahead (my site)))))
     
+(game "Boxijn Barildaan"
+    (players 2)
     (equipment { 
-        (board (cross 4) use:Edge)
-        (hand Each)
+        ("AlquerqueBoard" 3 3)
         (piece "Marker" Each 
-            ("MoveBoxijn" ~ 
-                (then ("ReplayIfLine4")) 
-            ) 
+            ("StepToEmpty" ~ 
+                (if (CanMoveForward)
+                    ("CaptureIfCanCapture")
+                    (if (CanMoveSideways)
+                        ("CaptureIfCapturable")
+                        ("RemoveAnyPiece")
+                    )
+                )
+            )
         )
     }) 
-    
     (rules 
         (start {
-            (place "Marker1" (sites PlayerSide))
-            (place "Marker2" (sites OpponentSide))
+            (place "Marker1" (sites BottomLeft))
+            (place "Marker2" (sites TopRight))
         })
+        
         (play (forEach Piece))
+        
         (end ("CaptureAll" Next))
     )
 )

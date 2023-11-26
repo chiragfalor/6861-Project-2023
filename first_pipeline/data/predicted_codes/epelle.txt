@@ -1,15 +1,37 @@
 (game "Epelle"
     (players 2) 
-    (equipment {
+    
+    (equipment { 
         ("AlquerqueBoard" 3 3)
-        (piece "Marker" Each ("StepToEmpty"))
-    }) 
+        (hand Each)
+        (piece "Marker" Each ("StepToEmpty")) 
+    })
+    
     (rules 
         (start {
-            (place "Marker1" (sites Bottom))
-            (place "Marker2" (sites Top))
+            (place "Marker1" (sites Top))
+            (place "Marker2" (sites Bottom))
         })
-        (play (forEach Piece))
-        (end ("Line3Win") ~("AtStartingPosition"))
+        
+        (play {
+            (if 
+                (at (sites Bottom))
+                (move 
+                    (from (sites Bottom))
+                    (to (sites {Left Right}))
+                    (if (at (sites Left)) (then (removeAt (sites Left))))
+                    (if (at (sites Right)) (then (removeAt (sites Right))))
+                )
+                
+                (move 
+                    (from (sites Top))
+                    (to (sites {Left Right}))
+                    (if (at (sites Left)) (then (removeAt (sites Left))))
+                    (if (at (sites Right)) (then (removeAt (sites Right))))
+                )
+            )
+        })
+        
+        (end ("Line3Win" - (start (move (from ##) (to ##)))))
     )
 )

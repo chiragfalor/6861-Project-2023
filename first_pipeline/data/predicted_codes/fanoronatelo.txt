@@ -1,50 +1,13 @@
-(define "MovePiece" 
-    (move Step 
-        #1 
-        (to (sites Empty))
-        (then ("ReplayIfLine3" Orthogonal))
-    )
-)
-
 (game "Fanorona Telo"
     (players 2) 
-    
-    (equipment { 
-        (board (square 3 diagonals:Solid) use:Vertex) 
+    (equipment {
+        ("AlquerqueBoard" 3 3)
         (hand Each)
-        (piece "Marker" Each (move (from OldPiece) (to (site)))
-                            (remove OldPiece)
-                            (place NewPiece (site))
-        ) 
+        (piece "Marker" Each ("StepToEmpty"))
     }) 
-    
     (rules 
-        (start (place "Marker1" "Hand1" count:3)
-               (place "Marker2" "Hand2" count:3)
-        )
-        
-        phases:{
-        (phase "Placement"
-            (play 
-                (move 
-                    (from (handSite Mover)) 
-                    (to (sites Empty))
-                    (then ("ReplayIfLine3" Orthogonal))
-                )
-            )
-            (nextPhase ("HandEmpty" P2) "Movement")
-        )
-        
-        (phase "Movement"
-            (play 
-                (if ("SameTurn")
-                    (MovePiece (from (last To)))
-                    (forEach Piece)
-                )
-            )
-        )
-        }
-        
-        (end ("Line3Win" Orthogonal))
+        (start (place "Marker" "Hand" count:3))
+        (play (if "HandNotEmpty" (move (from (handSite Mover)) (to (sites Empty)))))
+        (end ("Line3Win"))
     )
 )
