@@ -1,5 +1,6 @@
 
 import json
+import pandas as pd
 from GameModel import GameModel
 
 def load_games():
