@@ -9,7 +9,7 @@
         {
             "id": 1,
             "name": "3D Tic Tac Toe",
-            "description": "Play occurs on a 4x4x4 grid. One player places an X, the other places an O and players take turns placing their marks in the grid, attempting to get four in a row of their color. For the lines between levels, the diagonals are not taken in account.",
+            "description": "Play occurs on a 3x3x3 grid. One player places an X, the other places an O and players take turns placing their marks in the grid, attempting to get three in a row of their color. For the lines between levels, the diagonals are not taken in account.",
             "ppl_code_file_path": "game_desc_codes/tictactoe3d.txt"
         },
         {
