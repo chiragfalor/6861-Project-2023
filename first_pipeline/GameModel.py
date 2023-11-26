@@ -48,7 +48,8 @@ class GameModel(TextToCode):
             lang_phrase_list = []
             code_phrase_list = []
             query_list = []
-            for i in range(1, 9):
+            N_PHRASES = len(list(filter(lambda col_name: "language_phrase_" in col_name, df.columns)))
+            for i in range(1, N_PHRASES+1):
                 lang_phrase = row[f'language_phrase_{i}']
                 code_phrase = row[f'code_phrase_{i}']
                 if pd.isna(lang_phrase):
