@@ -17,6 +17,22 @@ def load_games():
         
     return games
 
+def load_query_games():
+    import os
+    games = load_games()
+    query_games = []
+    for g in games:
+        code_path = g.code_file_path.split('/')[-1].split('.')[0]
+        query_path = f'data/game_condition_query/{code_path}.csv'
+        # if it is a valid query, load it
+        if os.path.exists(query_path):
+            # print(g.name)
+            g.queries_df = pd.read_csv(query_path, index_col=0)
+            query_games.append(g)
+            g.process_queries()
+    return query_games
+    
+
 def load_system_prompt(file_path):
     with open(file_path) as f:
         system_prompt = f.read()
