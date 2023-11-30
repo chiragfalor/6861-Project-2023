@@ -3,7 +3,7 @@
         {
             "id": 0,
             "name": "A Simple Game",
-            "description": "This game is played on the following 4x4 square board. MOVE - On each turn, each player move one of his stones into an adjacent orthogonal empty cell. GOAL - Wins the player that makes a (orthogonal or diagonal) 3 in-a-row.",
+            "description": "This game is played on the following 4x4 square board. Each person has 4 piece. Initially, their pieces are placed alternatingly on 2 opposite sides of the board. MOVE - On each turn, each player move one of his pieces into an adjacent orthogonal empty cell. GOAL - Wins the player that makes a (orthogonal or diagonal) 3 in-a-row.",
             "ppl_code_file_path": "game_desc_codes/asimplegame.txt"
         },
         {
