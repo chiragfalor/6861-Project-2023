@@ -1,1 +1,1 @@
-Now user will ask a question about the game, answer in natural language.
+Now user will ask a question about the game, answer in natural language. Detail the reason behind your answer.
