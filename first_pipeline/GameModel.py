@@ -30,6 +30,7 @@ class GameModel(TextToCode):
         self.name = name
         if code_file_path:
             self.code_file_path = code_file_path
+            self.tag = self.code_file_path.split('/')[-1].split('.')[0]
     
     @property
     def description(self):
