@@ -8,7 +8,8 @@ with open("../openai_api_key.txt", "r") as f:
 
 # openai.api_key = api_key
 
-GPT_model = "gpt-3.5-turbo"
+# GPT_model = "gpt-3.5-turbo"
+GPT_model = "gpt-4"
 
 RANDOM_SEED = 123
 

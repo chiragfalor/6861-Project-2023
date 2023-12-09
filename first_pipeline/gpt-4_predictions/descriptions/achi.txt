@@ -1,0 +1,37 @@
+(define "IsLine3RemoveAgain" 
+    (then 
+        (if (is Line 3) 
+            (then (removeAgain (sites Occupied by:Next)))
+        )
+    )
+)
+
+//------------------------------------------------------------------------------
+
+(game "Achi"
+    (players 2)
+    (equipment {
+        (board (merge (square 3 3) outlines:Rectangle)) 
+        use:"Vertex"
+        (piece "Marker" Each ("JumpToEmpty" Orthogonal "IsLine3RemoveAgain"))
+        (hand Each count:6)
+    })
+    (rules
+        (start)
+        phases:{
+        (phase "Placement"
+            (play 
+                (move Add (to (sites Empty)))
+                (then ("IsLine3RemoveAgain"))
+            )
+            (nextPhase ("HandEmpty" Mover) "Movement")
+        )
+        
+        (phase "Movement" 
+            (play (forEach Piece)) 
+        )
+        }
+        
+        (end ("CountPieces" Loss 2))
+    )
+)

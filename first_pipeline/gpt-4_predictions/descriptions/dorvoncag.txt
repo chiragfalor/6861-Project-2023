@@ -1,0 +1,41 @@
+(game "Dorvon Cag"
+    (players 2) 
+    (equipment {
+        (board 
+            (add 
+                (circle 1 1 2)
+                edges(
+                    (join 0 4)
+                    (join 1 4)
+                    (join 2 4)
+                    (join 3 4)
+                    (join 0 2)
+                )
+            ) 
+            use:Vertex
+        )
+        (hand Each)
+        (piece "Marker" Each 
+            ("StepToEmpty" Orthogonal)
+        )
+    }) 
+    (rules 
+        (start (place "Marker" "Hand" count:2))
+        
+        phases:{
+        (phase "Placement"
+            (play
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty)) 
+                ) 
+            ) 
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        )
+        
+        ("PhaseMovePiece" "Movement")
+        }
+        
+        (end ("Stalemate" Next))
+    )
+)

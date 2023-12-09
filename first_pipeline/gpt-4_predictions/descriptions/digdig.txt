@@ -1,0 +1,49 @@
+(game "Dig Dig"
+    (players 2) 
+    (equipment { 
+        (board 
+            (replace (concentric {1 3 3}) 
+                vertices:{{2 8}} (union {(sites Vertex) (sites Cell)}) 
+            ) 
+            use:Vertex
+        )
+        (hand Each)
+        (piece "Marker" Each "StepToEmpty") 
+    }) 
+    (rules 
+        (start (place "Marker" "Hand" count:(size Board)))
+
+        phases:{
+        (phase "Placement" 
+            (play 
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty))
+                ) // Piece is placed on an opponent's piece and they cancel each other out
+                (if (any at:(to) (is Enemy)) 
+                    (remove (at (to)) (at (to))) 
+                ) 
+            ) 
+            (end 
+                (nextPhase Mover "HandEmpty" "CancelPiles") 
+            )
+        )
+
+        (phase "CancelPiles" // After placement phase, remove all piles of markers
+            (repeat 
+                (remove (at (sites Vertex)) count:(size (at (sites Vertex))))
+            ) 
+            (end 
+                (nextPhase "Moving") 
+            )
+        )
+
+        ("PhaseMovePiece" "Moving")
+        }
+        (end 
+            (if (<= (count Pieces Next) 1) 
+                (result Mover Win)
+            )
+        )
+    )
+)

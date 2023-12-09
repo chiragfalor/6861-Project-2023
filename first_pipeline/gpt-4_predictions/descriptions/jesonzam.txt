@@ -1,0 +1,50 @@
+(define "RemoveEnemyPiece" 
+    (if (can Move ("RemoveAnyEnemyPieceNotInLine3"))
+        ("RemoveAnyEnemyPieceNotInLine3")
+        ("RemoveAnyEnemyPiece")
+    )
+)
+
+(game "Jeson Zam"
+    (players 2) 
+    (equipment { 
+        (board (star 6) use:Vertex)
+        (piece "Disc" Each ("StepToEmpty" ~ (then ("ReplayIfLine3" Orthogonal)))) 
+        (hand Each)
+    }) 
+    (rules 
+        (start (place "Disc" "Hand" count:9)) 
+        
+        phases:{
+        (phase "Placement"
+            (play
+                (if "SameTurn"
+                    "RemoveEnemyPiece"
+                    (move 
+                        (from (handSite Mover)) 
+                        (to 
+                            (difference 
+                                (sites Empty) 
+                                (sites Middle)
+                            )
+                        )
+                        (then ("ReplayIfLine3" Orthogonal))
+                    ) 
+                )
+            ) 
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        )
+        
+        (phase "Movement" 
+            (play 
+                (if "SameTurn"
+                    "RemoveEnemyPiece"
+                    (forEach Piece)
+                )
+            )
+        )
+        }
+        
+        (end ("CaptureAll" Next))
+    )
+)

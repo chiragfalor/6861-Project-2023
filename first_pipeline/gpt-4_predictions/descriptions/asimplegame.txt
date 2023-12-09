@@ -1,0 +1,15 @@
+(game "A Simple Game"
+    (players 2) 
+    (equipment {
+        (board (square 4) use:Cell)
+        (piece "Marker" Each "StepToEmpty")
+    }) 
+    (rules 
+        (start { 
+            (place "Marker1" (sites Cell edge:Bottom)) 
+            (place "Marker2" (sites Cell edge:Top)) 
+        })
+        (play (forEach Piece))
+        (end (if (is Line 3) (result Mover Win)))
+    )
+)

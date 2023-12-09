@@ -1,0 +1,38 @@
+(define "NotAtStartingPosition"
+    (is (sites Empty) (union (sites Top) (sites Bottom)))
+)
+
+(setq startingSites (union (sites Top) (sites Bottom)))
+
+(define "MovePiece"
+    (move 
+        (from)
+        (to 
+            (if (in (from) startingSites)
+                (nextTo (from) (sites Empty) All)
+                (nextTo (from) (sites Empty) (there (a Piece at (to))) All)
+            )
+        )
+    )
+)
+
+(game "Epelle"
+    (players 2)
+    (equipment {
+        ("AlquerqueBoard" 3 3)
+        (hand Each)
+        (piece "Marker" Each "MovePiece")
+    })
+    (rules
+        (start {
+            (place "Marker1" (sites Top))
+            (place "Marker2" (sites Bottom))
+        })
+        (play 
+            (forEach Piece)
+        )
+        (end 
+            (if ("Line3Win" All "NotAtStartingPosition") (result Mover Win))
+        )
+    )
+)

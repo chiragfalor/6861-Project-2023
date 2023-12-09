@@ -1,0 +1,22 @@
+(define "SurroundedCaptureMove" 
+    (move Jump
+        (from)
+        (to (if ("IsEnemyAt" (between)) (remove (between))))
+    )
+)
+
+(game "El-Mthaltha" 
+    players: 2
+    (equipment {
+        ("AlquerqueBoard" 3 3)
+        (piece "Marker" Each "SurroundedCaptureMove")
+    }) 
+    (rules 
+        (start {
+            (place "Marker1" (sites Bottom)) 
+            (place "Marker2" (sites Top)) 
+        })
+        (play (forEach Piece))
+        (end ("CaptureAll" Next))
+    )
+)

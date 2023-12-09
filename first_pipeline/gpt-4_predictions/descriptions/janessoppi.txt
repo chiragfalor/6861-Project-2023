@@ -1,0 +1,38 @@
+(game "Janes Soppi"
+    (players 2)
+    (equipment {
+        (board 
+            (add (square 3) { (triangle 3 orientation:2 pointy:True) (triangle 3 orientation:0 pointy:True)})
+            use:Vertex
+        )
+        (hand Each)
+        (piece "Hare" P1 "StepToEmpty")
+        (piece "Hound" P2 (move Add (to (sites Empty alongside:(from)))))
+        (set StartingHounds (role P2 (sites LeftRight)))
+    })
+    (rules 
+        (start
+            (place "Hare" "Hand1" (to (centrePoint))))
+            (place "Hound" "Hand2" (to (sites "StartingHounds")))
+        )
+        
+        phases:{
+        (phase "Placement"
+            (play 
+                (move (from (handSite Mover)) (to (sites Empty))))
+            (nextPhase Mover (and ("HandEmpty" Mover) "Movement"))
+        ) 
+        
+        (phase "Movement" 
+            (play 
+                (if (= P1 Mover) 
+                    (forEach "Hare")
+                    (forEach "Hound")
+                )
+            )
+        )
+        }
+        
+        (end (if (no Moves (role P1 "Hare")) (result P2 Win)))
+    )
+)

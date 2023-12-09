@@ -1,0 +1,33 @@
+(game "La Chascona"
+    (players 2)
+    (equipment {
+        (board ("Yavalath" 3))
+        (hand Each)
+        (piece "Piece" Each ("StepToEmpty"))
+    })
+    (rules
+        (start (place "Piece" "Hand" count:9))
+        phases:{
+        (phase "Placement"
+            (play 
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty))
+                )
+            )
+            (nextPhaseMover ("HandEmpty" Mover) "MovePieces")
+        )
+        (phase "MovePieces"
+            (play (forEach ("StepToEmpty" Piece)))
+        )}
+        (end
+            (if 
+                (or 
+                    (>= (count Captured by:Mover) 7)
+                    (not (can Move (next Mover)))
+                ) 
+                (result Mover Win)
+            )
+        ) 
+    )
+)

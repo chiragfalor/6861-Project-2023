@@ -1,0 +1,18 @@
+(game "3D Tic Tac Toe"
+    (players 2)
+    (equipment {
+        (board (cube 3))
+        (hand Each)
+        (piece "Marker" Each)
+    })
+    (rules
+        (start (place "Marker" "Hand" count:1))
+        (play 
+            (move 
+                (from (handSite Mover)) 
+                (to (sites Empty))
+            )
+        )
+        (end ("Line3Win" Multi))
+    )
+)

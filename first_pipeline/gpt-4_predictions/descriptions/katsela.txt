@@ -1,0 +1,42 @@
+(game "Katsela"
+    (players 2)
+    (equipment {
+        (board 
+            (square 3 diagonals:Solid)
+            use:Vertex
+        )
+        (hand Each)
+        (piece "Stone" Each 
+            ("StepToEmpty" ~ 
+                (then
+                    (if (is Line 3 Orthogonal)
+                        (result Mover Win)
+                    )
+                )
+            )
+        ) 
+    })
+    (rules
+        (start {
+            (place "Stone1" (sites Centre))
+            (place "Stone" "Hand" count:2)
+            (place "Stone" "Hand" count:3)
+        })
+
+        phases:{
+        (phase "Placement"
+            (play 
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty)) 
+                )
+            )
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        )
+
+        ("PhaseMovePiece" "Movement")
+        }
+        
+        (end ("Line3Win"))
+    )
+)

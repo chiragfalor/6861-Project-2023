@@ -1,0 +1,30 @@
+(define "IfLine3CaptureAgain" 
+    (then 
+        (if (is "Line" 3) 
+            (moveAgain)
+        )
+    )
+)
+
+//------------------------------------------------------------------------------
+
+(game "Boxijn Barildaan"
+    (mode "Sequential" 
+        (players 2) 
+        (equipment {
+            ("FourSquareBoard" sizeSquare:3 joinDiagonals:False)
+            (piece "Marker" Each ("StepToEmpty" Orthogonal (setContent "IfLine3CaptureAgain")))
+        })
+        (rules  
+            (start {
+                (place "Marker1" (sites Corners) "IfLine3CaptureAgain")
+                (rotate 2)
+                (place "Marker2" (sites Corners) "IfLine3CaptureAgain")
+            }) 
+            
+            (play (forEach Piece))
+            
+            (end ("CaptureAll" Next))
+        )
+    )
+)

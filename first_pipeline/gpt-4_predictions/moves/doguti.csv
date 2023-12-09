@@ -1,0 +1,39 @@
+responses,answers,query,game_name,task_id
+"(move 
+    (from (handSite P1)) 
+    (to {5})
+)",(Move Cell 5 - Vertex C1),Player 1 places their piece on the lower right corner.,doguti,0
+(Move Cell 2 - Vertex C1),(Move Cell 6 - Vertex C3),Player 2 places their piece on the upper right corner.,doguti,0
+(Move Cell 0 - Vertex A1),(Move Cell 5 - Vertex A1),Player 1 places their piece on the lower left corner.,doguti,0
+(Move Cell 6 - Vertex A3),(Move Cell 6 - Vertex A3),Player 2 places their piece on the upper left corner.,doguti,0
+(Move Cell 5 4 - Vertex C1 - Vertex B2),(Move C1-B2),Player 1 moves their piece from the lower right corner to the center.,doguti,0
+(Move C3-C1),(Move C3-C1),Player 2 moves their piece from the upper right corner to the lower right corner.,doguti,0
+(Move B2-C3),(Move B2-C3),Player 1 moves their piece from the center to the upper right corner.,doguti,0
+"(move 
+    (from (handSite P1)) 
+    (to {7})
+)",(Move Cell 5 - Vertex C1),Player 1 places their piece on the lower right corner.,doguti,1
+(Move Cell 0 - Vertex C1),(Move Cell 6 - Vertex A3),Player 2 places their piece on the upper left corner.,doguti,1
+(Move Cell 7 - Vertex C3),(Move Cell 5 - Vertex C3),Player 1 places their piece on the upper right corner.,doguti,1
+(Move Cell 6 - Vertex B2),(Move Cell 6 - Vertex B2),Player 2 places their piece on the center.,doguti,1
+(Move Vertex B1 - Vertex B3),(Move C1-A1),Player 1 moves their piece from the lower right corner to the lower left corner.,doguti,1
+(Move B2-C1),(Move B2-C1),Player 2 moves their piece from the center to the lower right corner.,doguti,1
+(Move A1-B2),(Move A1-B2),Player 1 moves their piece from the lower left corner to the center.,doguti,1
+"(move 
+    (from (handSite P1)) 
+    (to {0})
+)",(Move Cell 5 - Vertex A3),Player 1 places their piece on the upper left corner.,doguti,2
+(Move Cell 3 - Vertex B2),(Move Cell 6 - Vertex B2),Player 2 places their piece on the center.,doguti,2
+(Move Cell 7 - Vertex C3),(Move Cell 5 - Vertex A1),Player 1 places their piece on the lower left corner.,doguti,2
+(Move Cell 6 - Vertex C1),(Move Cell 6 - Vertex C1),Player 2 places their piece on the lower right corner.,doguti,2
+"(move 
+    (from (handSite P1)) 
+    (to {0})
+)",(Move Cell 5 - Vertex A3),Player 1 places their piece on the upper left corner.,doguti,3
+(Move Cell 3 - Vertex B2),(Move Cell 6 - Vertex B2),Player 2 places their piece on the center.,doguti,3
+(Move Cell 7 - Vertex C3),(Move Cell 5 - Vertex C3),Player 1 places their piece on the upper right corner.,doguti,3
+(Move Cell 6 - Vertex C1),(Move Cell 6 - Vertex C1),Player 2 places their piece on the lower right corner.,doguti,3
+(Move (from Vertex A3) (to Vertex A1)),(Move A3-A1),Player 1 moves their piece from the upper left corner to the lower left corner.,doguti,3
+(Move B2-A3),(Move B2-A3),Player 2 moves their piece from the center to the upper left corner.,doguti,3
+(Move A3-B2),(Move C3-B2),Player 1 moves their piece from the upper left right to the center.,doguti,3
+(Move C1-C3),(Move C1-C3),Player 2 moves their piece from the lower right corner to the upper right corner.,doguti,3

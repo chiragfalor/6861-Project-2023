@@ -49,7 +49,9 @@ class GameModel(TextToCode):
             lang_phrase_list = []
             code_phrase_list = []
             query_list = []
-            N_PHRASES = len(list(filter(lambda col_name: "language_phrase_" in col_name, df.columns)))
+            N_LANG_PHRASES = len(list(filter(lambda col_name: "language_phrase_" in col_name, df.columns)))
+            N_CODE_PHRASES = len(list(filter(lambda col_name: "code_phrase_" in col_name, df.columns)))
+            N_PHRASES = min(N_LANG_PHRASES, N_CODE_PHRASES)
             for i in range(1, N_PHRASES+1):
                 lang_phrase = row[f'language_phrase_{i}']
                 code_phrase = row[f'code_phrase_{i}']

@@ -1,0 +1,66 @@
+(define "ForbidAdjacentPiecesPlacing"
+    (if 
+        (is In (to) (sites Around (sites Occupied by:Mover) orthogonal))
+        (return False)
+    )
+)
+
+(define "RemoveEnemyPiece"
+    (if 
+        (can Move ("RemoveAnyEnemyPiece"))
+        ("RemoveAnyEnemyPiece")
+    )
+)
+
+//------------------------------------------------------------------------------
+
+(game "Bolotudu"
+    (players 2) 
+    (equipment { 
+        (board (square 6) use:Vertex)
+        (hand Each)
+        (piece "Marker" Each 
+            ("StepToEmpty" Orthogonal
+                (then 
+                    (if 
+                        (is Line2 (sites Around (to) orthogonal))
+                        (then ("RemoveEnemyPiece"))
+                    )
+                )
+            )
+        ) 
+    }) 
+    (rules 
+        (start (place "Marker" "Hand" count:12))
+        phases:{
+        (phase "Placement"
+            (play
+                (if "SameTurn"
+                    "RemoveEnemyPiece"
+                    (move 
+                        (from (handSite Mover)) 
+                        (to (sites Empty)) 
+                        (then
+                            (addMeld (sites Around (to) orthogonal)
+                                (then ("RemoveEnemyPiece"))
+                            )
+                            "ForbidAdjacentPiecesPlacing"
+                        )
+                    ) 
+                )
+            ) 
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        )
+        
+        (phase "Movement" 
+            (play 
+                (if "SameTurn"
+                    "RemoveEnemyPiece"
+                    (forEach Piece)
+                )
+            )
+            (end (if (all Sites (sites Occupied by:Next) if:(not (is In (site) (sites Board)))) (result Mover Win)))
+        )
+        }
+    )
+)
