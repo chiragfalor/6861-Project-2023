@@ -1,0 +1,72 @@
+responses,answers,query,game_name,task_id
+"```
+(move MoveToPoint (from (sites Occupied by:P1)) (to (sites Empty at:(2,4))))
+```",(Move D4-D3),"Player 1 moves their piece from 1st row, 4th column to 2nd row, 4th column.",asimplegame,0
+(Move C4-D4),(Move C4-D4),"Player 2 moves their piece from 1st row, 3rd column to 1st row, 4th column.",asimplegame,0
+(Move B4-B3),(Move B4-B3),"Player 1 moves their piece from 1st row, 2nd column to 2nd row, 2nd column.",asimplegame,0
+(Move B1-B2),(Move B1-B2),"Player 2 moves their piece from 4th row, 2nd column to 3rd row, 2nd column.",asimplegame,0
+(Move C1-C2),(Move C1-C2),"Player 1 moves their piece from 4th row, 3rd column to 3rd row, 3rd column.",asimplegame,0
+(Move D1-D2),(Move D1-D2),"Player 2 moves their piece from 4th row, 4th column to 3rd row, 4th column.",asimplegame,0
+(Move C2-C3),(Move C2-C3),"Player 1 moves their piece from 3rd row, 3rd column to 2nd row, 3rd column.",asimplegame,0
+"```
+(move MoveToPoint (from (sites Occupied by:P1 at:({4 3}))) (to (sites Empty at:({3 3}))))
+```",(Move C1-C2),"Player 1 moves their piece from 4th row, 3rd column to 3rd row, 3rd column.",asimplegame,1
+(Move C2-C3),(Move C4-C3),"Player 2 moves their piece from 1st row, 3rd column to 2nd row, 3rd column.",asimplegame,1
+(Move C5-C4),(Move B4-C4),"Player 1 moves their piece from 1st row, 2nd column to 1st row, 3rd column.",asimplegame,1
+"```
+(move MoveToPoint (from (sites Occupied by:P1)) (to (sites Empty at:(3,3))))
+```",(Move C1-C2),"Player 1 moves their piece from 4th row, 3rd column to 3rd row, 3rd column.",asimplegame,2
+(Move C2-C3),(Move B1-B2),"Player 2 moves their piece from 4th row, 2nd column to 3rd row, 2nd column.",asimplegame,2
+(Move A1-B2),(Move A1-B1),"Player 1 moves their piece from 4th row, 1st column to 4th row, 2nd column.",asimplegame,2
+"```
+(move ""StepToEmpty""
+    (from (sites (4,3)))
+    (to (sites (3,3)))
+)
+```",(Move C1-C2),"Player 1 moves their piece from 4th row, 3rd column to 3rd row, 3rd column.",asimplegame,3
+(Move C2-C3),(Move C4-C3),"Player 2 moves their piece from 1st row, 3rd column to 2nd row, 3rd column.",asimplegame,3
+(Move C5-C2),(Move D4-C4),"Player 1 moves their piece from 1st row, 4th column to 1st row, 3rd column.",asimplegame,3
+(Move C3-B3),(Move C3-B3),"Player 2 moves their piece from 2nd row, 3rd column to 2nd row, 2nd column.",asimplegame,3
+"```
+(move MoveToPoint (from (sites Occupied by:P1)) (to (sites Empty at:(2,4))))
+```",(Move D4-D3),"Player 1 moves their piece from 1st row, 4th column to 2nd row, 4th column.",asimplegame,4
+(Move A4-A3),(Move A4-A3),"Player 2 moves their piece from 1st row, 1st column to 2nd row, 1st column.",asimplegame,4
+(Move C1-C2),(Move C1-C2),"Player 1 moves their piece from 4th row, 3rd column to 3rd row, 3rd column.",asimplegame,4
+(Move A3-B3),(Move A3-B3),"Player 2 moves their piece from 2nd row, 1st column to 2nd row, 2nd column.",asimplegame,4
+(Move C2-D2),(Move C2-D2),"Player 1 moves their piece from 3rd row, 3rd column to 3rd row, 4th column.",asimplegame,4
+"```
+(move MoveToPoint (from (id ""Ball"" P1 (sites Top, Column 4))) (to (sites Bottom, Column 4)))
+```",(Move D4-D3),"Player 1 moves their piece from 1st row, 4th column to 2nd row, 4th column.",asimplegame,5
+(Move C2-C3),(Move B1-B2),"Player 2 moves their piece from 4th row, 2nd column to 3rd row, 2nd column.",asimplegame,5
+(Move D3-D2),(Move D3-D2),"Player 1 moves their piece from 2nd row, 4th column to 3rd row, 4th column.",asimplegame,5
+(Move B2-C2),(Move B2-C2),"Player 2 moves their piece from 3rd row, 2nd column to 3rd row, 3rd column.",asimplegame,5
+"```
+(move MoveToPoint (from (sites Occupied by:P1)) (to (sites Empty at:(2,4))))
+```",(Move D4-D3),"Player 1 moves their piece from 1st row, 4th column to 2nd row, 4th column.",asimplegame,6
+(Move C4-C3),(Move C4-C3),"Player 2 moves their piece from 1st row, 3rd column to 2nd row, 3rd column.",asimplegame,6
+(Move B4-B3),(Move B4-B3),"Player 1 moves their piece from 1st row, 2nd column to 2nd row, 2nd column.",asimplegame,6
+(Move D1-D2),(Move D1-D2),"Player 2 moves their piece from 4th row, 4th column to 3rd row, 4th column.",asimplegame,6
+(Move B3-B4),(Move B3-B4),"Player 1 moves their piece from 2nd row, 2nd column to 1st row, 2nd column.",asimplegame,6
+"```
+(move MoveToPoint (from (sites Occupied by:P1 at:({4 3}))) (to (sites Empty at:({3 3}))))
+```",(Move C1-C2),"Player 1 moves their piece from 4th row, 3rd column to 3rd row, 3rd column.",asimplegame,7
+(Move C2-C3),(Move D1-D2),"Player 2 moves their piece from 4th row, 4th column to 3rd row, 4th column.",asimplegame,7
+(Move A1-A2),(Move A1-A2),"Player 1 moves their piece from 4th row, 1st column to 3rd row, 1st column.",asimplegame,7
+(Move A4-A3),(Move A4-A3),"Player 2 moves their piece from 1st row, 1st column to 2nd row, 1st column.",asimplegame,7
+(Move D4-D3),(Move D4-D3),"Player 1 moves their piece from 1st row, 4th column to 2nd row, 4th column.",asimplegame,7
+(Move D3-D4),(Move C4-D4),"Player 2 moves their piece from 1st row, 3rd column to 1st row, 4th column.",asimplegame,7
+"```
+(move MoveToPoint (from (sites Occupied by:Mover at:({4 3}))) (to (sites Empty at:({3 3}))))
+```",(Move C1-C2),"Player 1 moves their piece from 4th row, 3rd column to 3rd row, 3rd column.",asimplegame,8
+(Move C2-C3),(Move B1-B2),"Player 2 moves their piece from 4th row, 2nd column to 3rd row, 2nd column.",asimplegame,8
+(Move D1-D2),(Move D4-D3),"Player 1 moves their piece from 1st row, 4th column to 2nd row, 4th column.",asimplegame,8
+(Move D1-D2),(Move D1-D2),"Player 2 moves their piece from 4th row, 4th column to 3rd row, 4th column.",asimplegame,8
+"```
+(move MovePhase ""Ball1"" 
+    (from (site 0 1)) 
+    (to (site 1 1)) 
+)
+```",(Move B4-B3),"Player 1 moves their piece from 1st row, 2nd column to 2nd row, 2nd column.",asimplegame,9
+(Move B2-B3),(Move B1-B2),"Player 2 moves their piece from 4th row, 2nd column to 3rd row, 2nd column.",asimplegame,9
+(Move B3-C3),(Move B3-A3),"Player 1 moves their piece from 2nd row, 2nd column to 2nd row, 1st column.",asimplegame,9
+(Move D1-D2),(Move D1-D2),"Player 2 moves their piece from 4th row, 4th column to 3rd row, 4th column.",asimplegame,9

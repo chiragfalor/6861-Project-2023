@@ -1,0 +1,100 @@
+responses,answers,query,game_name,task_id
+(play (move Add (to (site 13))) who:Player2),(Add Disc1 to C7),"In the first turn, player O places their mark on the middle slide, 1st row, 3rd column.",tictactoe3d,0
+(Add Cross2 to C5),(Add Cross2 to C6),"In the second turn, player X places their mark on the middle slide, 2nd row, 3rd column.",tictactoe3d,0
+(Add Disc1 to A3),(Add Disc1 to C3),"In the third turn, player O places their mark on the back slide, 1st row, 3rd column.",tictactoe3d,0
+(Add Cross2 to C4),(Add Cross2 to B2),"In the fourth turn, player X places their mark on the back slide, 2nd row, 2nd column.",tictactoe3d,0
+(Add Disc1 to C11),(Add Disc1 to C11),"In the fifth turn, player O places their mark on the front slide, 1st row, 3rd column.",tictactoe3d,0
+"The Ludii statement that corresponds to this move is:
+
+`(move Add ""O"" (to (sites Bottom 0 0)))`",(Add Disc1 to A11),"In the first turn, player O places their mark on the front slide, 1st row, 1st column.",tictactoe3d,1
+(Add Cross2 to B22),(Add Cross2 to B6),"In the second turn, player X places their mark on the middle slide, 2nd row, 2nd column.",tictactoe3d,1
+(Add Disc1 to B3),(Add Disc1 to C7),"In the third turn, player O places their mark on the middle slide, 1st row, 3rd column.",tictactoe3d,1
+(Add Cross2 to B3),(Add Cross2 to B2),"In the fourth turn, player X places their mark on the back slide, 2nd row, 2nd column.",tictactoe3d,1
+(Add Disc1 to B11),(Add Disc1 to B10),"In the fifth turn, player O places their mark on the front slide, 2nd row, 2nd column.",tictactoe3d,1
+(Add Cross2 to A8),(Add Cross2 to A7),"In the sixth turn, player X places their mark on the middle slide, 1st row, 1st column.",tictactoe3d,1
+(Add Disc1 to C5),(Add Disc1 to C5),"In the seventh turn, player O places their mark on the middle slide, 3rd row, 3rd column.",tictactoe3d,1
+(Add Cross2 to B3),(Add Cross2 to B3),"In the eighth turn, player X places their mark on the back slide, 1st row, 2nd column.",tictactoe3d,1
+"The Ludii statement that corresponds to this move is:
+
+(play (move Add (to (sites Board [0 1] [1 1])) ""Disc""))",(Add Disc1 to A10),"In the first turn, player O places their mark on the front slide, 2nd row, 1st column.",tictactoe3d,2
+(Add Cross2 to B5),(Add Cross2 to B3),"In the second turn, player X places their mark on the back slide, 1st row, 2nd column.",tictactoe3d,2
+(Add Disc1 to A6),(Add Disc1 to B6),"In the third turn, player O places their mark on the middle slide, 2nd row, 2nd column.",tictactoe3d,2
+(Add Cross2 to B2),(Add Cross2 to B7),"In the fourth turn, player X places their mark on the middle slide, 1st row, 2nd column.",tictactoe3d,2
+(Add Disc1 to C7),(Add Disc1 to C7),"In the fifth turn, player O places their mark on the middle slide, 1st row, 3rd column.",tictactoe3d,2
+(Add Cross2 to B2),(Add Cross2 to B11),"In the sixth turn, player X places their mark on the front slide, 1st row, 2nd column.",tictactoe3d,2
+"The Ludii statement that corresponds to this move is:
+
+`(move Add ""O"" (to (index (sites Level 3 Row 3 Column 1))))`",(Add Disc1 to A1),"In the first turn, player O places their mark on the back slide, 3rd row, 1st column.",tictactoe3d,3
+(Add Cross1 to C1),(Add Cross2 to A3),"In the second turn, player X places their mark on the back slide, 1st row, 1st column.",tictactoe3d,3
+(Add Disc1 to B1),(Add Disc1 to C7),"In the third turn, player O places their mark on the middle slide, 1st row, 3rd column",tictactoe3d,3
+(Add Cross2 to B3),(Add Cross2 to B3),"In the fourth turn, player X places their mark on the back slide, 1st row, 2nd column.",tictactoe3d,3
+(Add Disc1 to B7),(Add Disc1 to B6),"In the fifth turn, player O places their mark on the middle slide, 2nd row, 2nd column.",tictactoe3d,3
+(Add Cross2 to C3),(Add Cross2 to C3),"In the sixth turn, player X places their mark on the back slide, 1st row, 3rd column.",tictactoe3d,3
+"First turn of Player 1 (O) would be:
+
+```
+(play (move Add (to (sites Empty level:1 row:0 column:2))))
+```
+This command places a mark in the middle slide (level:1), 1st row (row:0), 3rd column (column:2). The indexes are 0-based in Ludii. Hence, we use 1 for the middle slide (2nd level), 0 for the 1st row, and 2 for the 3rd column.",(Add Disc1 to C11),"In the first turn, player O places their mark on the middle slide, 1st row, 3rd column. ",tictactoe3d,4
+(Add Cross1 to C3),(Add Cross2 to A7),"In the second turn, player X places their mark on the front slide, 1st row, 3rd column. ",tictactoe3d,4
+(Add Disc1 to C8),(Add Disc1 to C6),"In the third turn, player O places their mark on the front slide, 2nd row, 3rd column. ",tictactoe3d,4
+(Add Cross2 to B10),(Add Cross2 to B6),"In the fourth turn, player X places their mark on the middle slide, 2nd row, 2nd column. ",tictactoe3d,4
+(Add Disc1 to B4),(Add Disc1 to C5),"In the fifth turn, player O places their mark on the front slide, 3rd row, 2nd column. ",tictactoe3d,4
+(Add Cross2 to D7),(Add Cross2 to C7),"In the sixth turn, player X places their mark on the back slide, 1st row, 3rd column. ",tictactoe3d,4
+(Add Disc1 to A7),(Add Disc1 to C1),"In the seventh turn, player O places their mark on the back slide, 1st row, 1st column. ",tictactoe3d,4
+(Add Cross2 to B7),(Add Cross2 to B7),"In the eighth turn, player X places their mark on the back slide, 2nd row, 3rd column.",tictactoe3d,4
+"First turn of Player O can be presented in Ludii as follows:
+
+(play (move Add (to (sites Empty ""Front(1, 1)""))))",(Add Disc1 to A11),"In the first turn, player O places their mark on the front slide, 1st row, 1st column. ",tictactoe3d,5
+(Add Cross1 to B22),(Add Cross2 to B6),"In the second turn, player X places their mark on the middle slide, 2nd row, 2nd column. ",tictactoe3d,5
+(Add Disc1 to C3),(Add Disc1 to C3),"In the third turn, player O places their mark on the back  slide, 1st row, 3rd column. ",tictactoe3d,5
+(Add Cross2 to B4),(Add Cross2 to B5),"In the fourth turn, player X places their mark on the middle slide, 3rd row, 2nd column. ",tictactoe3d,5
+(Add Disc1 to C9),(Add Disc1 to A3),"In the fifth turn, player O places their mark on the back slide, 1st row, 1st column. ",tictactoe3d,5
+(Add Cross2 to B8),(Add Cross2 to A6),"In the sixth turn, player X places their mark on the middle slide, 2nd row, 1st column. ",tictactoe3d,5
+(Add Disc1 to B3),(Add Disc1 to B3),"In the seventh turn, player O places their mark on the back slide, 1st row, 2nd column. ",tictactoe3d,5
+"The Ludii statement that corresponds to the move where player O, or player 2, places their mark in the back slice, 2nd row, 2nd column is:
+
+`(move Add (to (site 15)) P2)`
+
+This will place the symbol or piece for player 2, in this case 'O', on the middle cell of the back slice of the 3x3x3 grid.",(Add Disc1 to B2),"In the first turn, player O places their mark on the back slide,2nd row, 2nd column. ",tictactoe3d,6
+(Add Cross2 to M2),(Add Cross2 to B6),"In the second turn, player X places their mark on the middle slide, 2nd row, 2nd column. ",tictactoe3d,6
+(Add Disc1 to A6),(Add Disc1 to B7),"In the third turn, player O places their mark on the middle slide, 1st row, 2nd column. ",tictactoe3d,6
+(Add Cross2 to B9),(Add Cross2 to A5),"In the fourth turn, player X places their mark on the middle slide, 3rd row, 1st column. ",tictactoe3d,6
+(Add Disc1 to C7),(Add Disc1 to C7),"In the fifth turn, player O places their mark on the middle slide, 1st row, 3rd column. ",tictactoe3d,6
+(Add Cross2 to A7),(Add Cross2 to A7),"In the sixth turn, player X places their mark on the middle slide, 1st row, 1st column. ",tictactoe3d,6
+(Add Disc1 to A6),(Add Disc1 to A6),"In the seventh turn, player O places their mark on the middle slide, 2nd row, 1st column. ",tictactoe3d,6
+(Add Cross2 to B5),(Add Cross2 to B5),"In the eighth turn, player X places their mark on the middle slide, 3rd row, 2nd column.",tictactoe3d,6
+(Add Disc1 to C5),(Add Disc1 to C5),"In the nineth turn, player O places their mark on the middle slide, 3rd row, 3rd column. ",tictactoe3d,6
+(Add Cross2 to C6),(Add Cross2 to C6),"In the tenth turn, player X places their mark on the middle slide, 2nd row, 3rd column.",tictactoe3d,6
+"(play (move Add (to (site Back 2 3)))
+Else if I can get more information about the player turn order it would better to provide explicit player Id as well
+
+(play (move Add (to (site Back 2 3)) P1)) if O is player 1
+or
+(play (move Add (to (site Back 2 3)) P2)) if O is player 2.",(Add Disc1 to C2),"In the first turn, player O places their mark on the back slide,2nd row, 3rd column. ",tictactoe3d,7
+(Add Cross1 to A2),(Add Cross2 to A10),"In the second turn, player X places their mark on the front  slide, 2nd row, 1st column. ",tictactoe3d,7
+(Add Disc1 to C14),(Add Disc1 to B6),"In the third turn, player O places their mark on the middle slide, 2nd row, 2nd column. ",tictactoe3d,7
+(Add Cross2 to C10),(Add Cross2 to C10),"In the fourth turn, player X places their mark on the front slide, 2nd row, 3rd column. ",tictactoe3d,7
+(Add Disc1 to B10),(Add Disc1 to B10),"In the fifth turn, player O places their mark on the front  slide, 2nd row, 2nd column. ",tictactoe3d,7
+(Add Cross2 to B2),(Add Cross2 to B2),"In the sixth turn, player X places their mark on the back  slide, 2nd row, 2nd column. ",tictactoe3d,7
+(Add Disc1 to C6),(Add Disc1 to C6),"In the seventh turn, player O places their mark on the middle slide, 2nd row, 3rd column. ",tictactoe3d,7
+(Add Cross2 to A9),(Add Cross2 to A9),"In the eighth turn, player X places their mark on the front slide, 3rd row, 1st column.",tictactoe3d,7
+(Add Disc1 to A6),(Add Disc1 to A6),"In the nineth turn, player O places their mark on the middle slide, 2nd row, 1st column. ",tictactoe3d,7
+"First turn of Player O can be presented in Ludii as follows:
+
+(play (move Add (to (sites Empty level:2 row:2 column:2)) P2))",(Add Disc1 to C1),"In the first turn, player O places their mark on the back slide, 3rd row, 3rd column. ",tictactoe3d,8
+(Add Cross to A3),(Add Cross2 to A1),"In the second turn, player X places their mark on the back   slide, 3rd row, 1st column. ",tictactoe3d,8
+(Add Disc3 to C3),(Add Disc1 to C9),"In the third turn, player O places their mark on the front  slide, 3rd row, 3rd column. ",tictactoe3d,8
+(Add Cross2 to C5),(Add Cross2 to C5),"In the fourth turn, player X places their mark on the middle  slide, 3rd row, 3rd column. ",tictactoe3d,8
+(Add Disc1 to C2),(Add Disc1 to C3),"In the fifth turn, player O places their mark on the back   slide, 1st row, 3rd column. ",tictactoe3d,8
+(Add Cross2 to C2),(Add Cross2 to C2),"In the sixth turn, player X places their mark on the back    slide, 2nd row, 3rd column. ",tictactoe3d,8
+(Add Disc1 to C7),(Add Disc1 to C11),"In the seventh turn, player O places their mark on the front  slide, 1st row, 3rd column. ",tictactoe3d,8
+(Add Cross2 to C10),(Add Cross2 to C10),"In the eighth turn, player X places their mark on the front slide, 2nd row, 3rd column.",tictactoe3d,8
+(Add Disc1 to C7),(Add Disc1 to C7),"In the nineth turn, player O places their mark on the middle slide, 1st row, 3rd column. ",tictactoe3d,8
+"First turn of Player O can be presented in Ludii as follows:
+
+(play (move Add (to (sites Empty level:0 row:2 column:3)) P2))",(Add Disc1 to C10),"In the first turn, player O places their mark on the front slide, 2nd row, 3rd column. ",tictactoe3d,9
+(Add Cross to C12),(Add Cross2 to C6),"In the second turn, player X places their mark on the middle    slide, 2nd row, 3rd column. ",tictactoe3d,9
+(Add Disc1 to C9),(Add Disc1 to B10),"In the third turn, player O places their mark on the front slide, 2nd row, 2nd column. ",tictactoe3d,9
+(Add Cross2 to B6),(Add Cross2 to B6),"In the fourth turn, player X places their mark on the middle  slide, 2nd row, 2nd column. ",tictactoe3d,9
+(Add Disc1 to A10),(Add Disc1 to A10),"In the fifth turn, player O places their mark on the front slide, 2nd row, 1st column. ",tictactoe3d,9
