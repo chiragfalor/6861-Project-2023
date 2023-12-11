@@ -2,4 +2,4 @@
 0,0,A valid move,"Yes, Player 2's move from the upper left corner to the center is valid, as these spots are connected by a diagonal line."
 1,1,An invalid move,"No, this is not a valid move because the center spot is currently occupied by Player 1's piece."
 2,2,Player 2,The game isn't over yet because the players can still move their pieces. Would you please continue with the moves?
-3,3,No one,Player 1 wins. Player 2 can't make a move as all the adjacent spots are occupied.
+3,3,No one,Player 1 wins. Player 2 can't make a move as both potential spots (center and lower right corner) are occupied by Player 1's pieces.
