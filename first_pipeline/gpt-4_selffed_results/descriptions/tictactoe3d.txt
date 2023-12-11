@@ -1,0 +1,22 @@
+(game "3D Tic Tac Toe"
+    (players 2)
+    (equipment {
+        (board (grid3D 3 3 3))
+        (piece "O" Mover)
+        (piece "X" Mover)
+    })
+    (rules
+        (start {
+            (place "O" (to 0))
+            (place "X" (to 0))
+        })
+        (play 
+            (move 
+                Add 
+                (from Container) 
+                (to (sites Empty))
+            )
+        )
+        (end ("Line3Win" Orthogonal))
+    )
+)

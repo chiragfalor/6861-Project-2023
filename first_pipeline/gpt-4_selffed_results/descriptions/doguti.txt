@@ -1,0 +1,36 @@
+(game "Do Guti"
+    (players 2)
+    (equipment {
+        (board 
+            (remove
+                (shift 2 0 (square 3 diagonals:True))
+                vertices:{{2 0}}
+            )
+            use:Vertex
+        )
+        (hand Each)
+        (piece "Marker" Each "StepToEmpty")
+    })
+    (rules 
+        (start (place "Marker" "Hand" count:2))
+        
+        phases:{
+
+        (phase "Placement"
+            (play
+                (move 
+                    (from (handSite Mover)) 
+                    (to (sites Empty))
+                )
+            ) 
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        )
+        
+        ("PhaseMovePiece" "Movement")
+
+        }
+
+        (end (if (no Moves Next) (result Mover Win)))
+
+    )
+)

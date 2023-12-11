@@ -1,0 +1,42 @@
+(game "Achi"
+    (players 2)
+    (equipment { 
+        (board (nosh 2 2 @draw) use:Vertex) 
+        (hand Each)
+        (piece "Marker" Each 
+            ("StepToEmpty" ~ 
+                (then ("ReplayIfLine3")) 
+            )
+        ) 
+    }) 
+    (rules 
+        (start (place "Marker" "Hand" count:6))
+        
+        phases:{
+        (phase "Placement"
+            (play
+                (if "SameTurn"
+                    ("RemoveAnyEnemyPieceNotInLine3" Orthogonal)
+                    (move 
+                        (from (handSite Mover)) 
+                        (to (sites Empty)) 
+                        (then ("ReplayIfLine3")) 
+                    ) 
+                )
+            ) 
+            (nextPhase Mover ("HandEmpty" Mover) "Movement")
+        )
+        
+        (phase "Movement" 
+            (play 
+                (if "SameTurn"
+                    ("RemoveAnyEnemyPieceNotInLine3" Orthogonal) 
+                    (forEach Piece)
+                )
+            )
+        )
+        }
+        
+        (end ("StallMating" Next))
+    )
+)

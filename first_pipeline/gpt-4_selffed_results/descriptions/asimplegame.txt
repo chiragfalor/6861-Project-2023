@@ -1,0 +1,18 @@
+(game "A Simple Game"
+    (players 2) 
+    (equipment { 
+        (board (square 4)) 
+        (hand Each)
+        (piece "Marker" Each
+            "StepToEmpty"
+        )
+    }) 
+    (rules 
+        (start {
+            (place "Marker1" (sites Bottom))
+            (place "Marker2" (sites Top))
+        })
+        (play (forEach Piece))
+        (end ("Line3OrthogonalDiagonal" Mover))
+    )
+)

@@ -1,0 +1,74 @@
+responses,answers,query,game_name,task_id
+(Move Add (to (between M12 P22))),,"In the first turn, player O places their mark on the middle slide, 1st row, 3rd column.",tictactoe3d,0
+(Move Add (to (between P13 M23))),,"In the second turn, player X places their mark on the middle slide, 2nd row, 3rd column.",tictactoe3d,0
+(Move Add (to (between P14 B24))),,"In the third turn, player O places their mark on the back slide, 1st row, 3rd column.",tictactoe3d,0
+(Move Add (to (between B23 P13))),,"In the fourth turn, player X places their mark on the back slide, 2nd row, 2nd column.",tictactoe3d,0
+(Move Add (to (between F12 P22))),,"In the fifth turn, player O places their mark on the front slide, 1st row, 3rd column.",tictactoe3d,0
+(Move Add (to (between Mover (sites Empty) (pivot Cell 1)))),,"In the first turn, player O places their mark on the front slide, 1st row, 1st column.",tictactoe3d,1
+(Move Add (to (between Mover (sites Empty) (pivot Cell 14)))),,"In the second turn, player X places their mark on the middle slide, 2nd row, 2nd column.",tictactoe3d,1
+(Move Add (to (between Mover (sites Empty) (pivot Cell 12)))),,"In the third turn, player O places their mark on the middle slide, 1st row, 3rd column.",tictactoe3d,1
+(Move Add (to (between Mover (sites Empty) (pivot Cell 23)))),,"In the fourth turn, player X places their mark on the back slide, 2nd row, 2nd column.",tictactoe3d,1
+(Move Add (to (between Mover (sites Empty) (pivot Cell 5)))),,"In the fifth turn, player O places their mark on the front slide, 2nd row, 2nd column.",tictactoe3d,1
+(Move Add (to (between Mover (sites Empty) (pivot Cell 10)))),,"In the sixth turn, player X places their mark on the middle slide, 1st row, 1st column.",tictactoe3d,1
+(Move Add (to (between Mover (sites Empty) (pivot Cell 18)))),,"In the seventh turn, player O places their mark on the middle slide, 3rd row, 3rd column.",tictactoe3d,1
+(Move Add (to (between Mover (sites Empty) (pivot Cell 19)))),,"In the eighth turn, player X places their mark on the back slide, 1st row, 2nd column.",tictactoe3d,1
+(Move Add (to (between Mover (sites Empty) (pivot Cell 4)))),,"In the first turn, player O places their mark on the front slide, 2nd row, 1st column.",tictactoe3d,2
+(Move Add (to (between Mover (sites Empty) (pivot Cell 11)))),,"In the second turn, player X places their mark on the back slide, 1st row, 2nd column.",tictactoe3d,2
+(Move Add (to (between Mover (sites Empty) (pivot Cell 13)))),,"In the third turn, player O places their mark on the middle slide, 2nd row, 2nd column.",tictactoe3d,2
+(Move Add (to (between Mover (sites Empty) (pivot Cell 10)))),,"In the fourth turn, player X places their mark on the middle slide, 1st row, 2nd column.",tictactoe3d,2
+(Move Add (to (between Mover (sites Empty) (pivot Cell 12)))),,"In the fifth turn, player O places their mark on the middle slide, 1st row, 3rd column.",tictactoe3d,2
+(Move Add (to (between Mover (sites Empty) (pivot Cell 1)))),,"In the sixth turn, player X places their mark on the front slide, 1st row, 2nd column.",tictactoe3d,2
+(Move Add (to (between Mover (site 18)))),,"In the first turn, player O places their mark on the back slide, 3rd row, 1st column.",tictactoe3d,3
+(Move Add (to (between Mover (site 0)))),,"In the second turn, player X places their mark on the back slide, 1st row, 1st column.",tictactoe3d,3
+(Move Add (to (between Mover (site 11)))),,"In the third turn, player O places their mark on the middle slide, 1st row, 3rd column",tictactoe3d,3
+(Move Add (to (between Mover (site 1)))),,"In the fourth turn, player X places their mark on the back slide, 1st row, 2nd column.",tictactoe3d,3
+(Move Add (to (between Mover (site 13)))),,"In the fifth turn, player O places their mark on the middle slide, 2nd row, 2nd column.",tictactoe3d,3
+(Move Add (to (between Mover (site 2)))),,"In the sixth turn, player X places their mark on the back slide, 1st row, 3rd column.",tictactoe3d,3
+"(Move Add 13 ""O"")",,"In the first turn, player O places their mark on the middle slide, 1st row, 3rd column. ",tictactoe3d,4
+"(Move Add 2 ""X"")",,"In the second turn, player X places their mark on the front slide, 1st row, 3rd column. ",tictactoe3d,4
+"(Move Add 5 ""O"")",,"In the third turn, player O places their mark on the front slide, 2nd row, 3rd column. ",tictactoe3d,4
+"(Move Add 10 ""X"")",,"In the fourth turn, player X places their mark on the middle slide, 2nd row, 2nd column. ",tictactoe3d,4
+"(Move Add 7 ""O"")",,"In the fifth turn, player O places their mark on the front slide, 3rd row, 2nd column. ",tictactoe3d,4
+"(Move Add 24 ""X"")",,"In the sixth turn, player X places their mark on the back slide, 1st row, 3rd column. ",tictactoe3d,4
+"(Move Add 24 ""O"")",,"In the seventh turn, player O places their mark on the back slide, 1st row, 1st column. ",tictactoe3d,4
+"(Move Add 25 ""X"")",,"In the eighth turn, player X places their mark on the back slide, 2nd row, 3rd column.",tictactoe3d,4
+(Move Add 0 0),,"In the first turn, player O places their mark on the front slide, 1st row, 1st column. ",tictactoe3d,5
+(Move Add 13 1),,"In the second turn, player X places their mark on the middle slide, 2nd row, 2nd column. ",tictactoe3d,5
+(Move Add 18 0),,"In the third turn, player O places their mark on the back  slide, 1st row, 3rd column. ",tictactoe3d,5
+(Move Add 15 1),,"In the fourth turn, player X places their mark on the middle slide, 3rd row, 2nd column. ",tictactoe3d,5
+(Move Add 16 0),,"In the fifth turn, player O places their mark on the back slide, 1st row, 1st column. ",tictactoe3d,5
+(Move Add 9 1),,"In the sixth turn, player X places their mark on the middle slide, 2nd row, 1st column. ",tictactoe3d,5
+(Move Add 17 0),,"In the seventh turn, player O places their mark on the back slide, 1st row, 2nd column. ",tictactoe3d,5
+(Move Add (to (between Mover (site 13)))),,"In the first turn, player O places their mark on the back slide,2nd row, 2nd column. ",tictactoe3d,6
+(Move Add (to (between Mover (site 22)))),,"In the second turn, player X places their mark on the middle slide, 2nd row, 2nd column. ",tictactoe3d,6
+(Move Add (to (between Mover (site 19)))),,"In the third turn, player O places their mark on the middle slide, 1st row, 2nd column. ",tictactoe3d,6
+(Move Add (to (between Mover (site 24)))),,"In the fourth turn, player X places their mark on the middle slide, 3rd row, 1st column. ",tictactoe3d,6
+(Move Add (to (between Mover (site 21)))),,"In the fifth turn, player O places their mark on the middle slide, 1st row, 3rd column. ",tictactoe3d,6
+(Move Add (to (between Mover (site 18)))),,"In the sixth turn, player X places their mark on the middle slide, 1st row, 1st column. ",tictactoe3d,6
+(Move Add (to (between Mover (site 20)))),,"In the seventh turn, player O places their mark on the middle slide, 2nd row, 1st column. ",tictactoe3d,6
+(Move Add (to (between Mover (site 25)))),,"In the eighth turn, player X places their mark on the middle slide, 3rd row, 2nd column.",tictactoe3d,6
+(Move Add (to (between Mover (site 27)))),,"In the nineth turn, player O places their mark on the middle slide, 3rd row, 3rd column. ",tictactoe3d,6
+(Move Add (to (between Mover (site 23)))),,"In the tenth turn, player X places their mark on the middle slide, 2nd row, 3rd column.",tictactoe3d,6
+(Move Add (to (between Mover (sites Empty) level:2 row:2 column:3))),,"In the first turn, player O places their mark on the back slide,2nd row, 3rd column. ",tictactoe3d,7
+(Move Add (to (between Mover (sites Empty) level:0 row:2 column:1))),,"In the second turn, player X places their mark on the front  slide, 2nd row, 1st column. ",tictactoe3d,7
+(Move Add (to (between Mover (sites Empty) level:1 row:2 column:2))),,"In the third turn, player O places their mark on the middle slide, 2nd row, 2nd column. ",tictactoe3d,7
+(Move Add (to (between Mover (sites Empty) level:0 row:2 column:3))),,"In the fourth turn, player X places their mark on the front slide, 2nd row, 3rd column. ",tictactoe3d,7
+(Move Add (to (between Mover (sites Empty) level:0 row:2 column:2))),,"In the fifth turn, player O places their mark on the front  slide, 2nd row, 2nd column. ",tictactoe3d,7
+(Move Add (to (between Mover (sites Empty) level:2 row:2 column:2))),,"In the sixth turn, player X places their mark on the back  slide, 2nd row, 2nd column. ",tictactoe3d,7
+(Move Add (to (between Mover (sites Empty) level:1 row:2 column:3))),,"In the seventh turn, player O places their mark on the middle slide, 2nd row, 3rd column. ",tictactoe3d,7
+(Move Add (to (between Mover (sites Empty) level:0 row:3 column:1))),,"In the eighth turn, player X places their mark on the front slide, 3rd row, 1st column.",tictactoe3d,7
+(Move Add (to (between Mover (sites Empty) level:1 row:2 column:1))),,"In the nineth turn, player O places their mark on the middle slide, 2nd row, 1st column. ",tictactoe3d,7
+"(Move Add 26 ""O"")",,"In the first turn, player O places their mark on the back slide, 3rd row, 3rd column. ",tictactoe3d,8
+"(Move Add 24 ""X"")",,"In the second turn, player X places their mark on the back   slide, 3rd row, 1st column. ",tictactoe3d,8
+"(Move Add 2 ""O"")",,"In the third turn, player O places their mark on the front  slide, 3rd row, 3rd column. ",tictactoe3d,8
+"(Move Add 14 ""X"")",,"In the fourth turn, player X places their mark on the middle  slide, 3rd row, 3rd column. ",tictactoe3d,8
+"(Move Add 20 ""O"")",,"In the fifth turn, player O places their mark on the back   slide, 1st row, 3rd column. ",tictactoe3d,8
+"(Move Add 23 ""X"")",,"In the sixth turn, player X places their mark on the back    slide, 2nd row, 3rd column. ",tictactoe3d,8
+"(Move Add -1 ""O"")",,"In the seventh turn, player O places their mark on the front  slide, 1st row, 3rd column. ",tictactoe3d,8
+"(Move Add 1 ""X"")",,"In the eighth turn, player X places their mark on the front slide, 2nd row, 3rd column.",tictactoe3d,8
+"(Move Add 8 ""O"")",,"In the nineth turn, player O places their mark on the middle slide, 1st row, 3rd column. ",tictactoe3d,8
+"(Move Add 5 ""O"")",,"In the first turn, player O places their mark on the front slide, 2nd row, 3rd column. ",tictactoe3d,9
+"(Move Add 14 ""X"")",,"In the second turn, player X places their mark on the middle    slide, 2nd row, 3rd column. ",tictactoe3d,9
+"(Move Add 4 ""O"")",,"In the third turn, player O places their mark on the front slide, 2nd row, 2nd column. ",tictactoe3d,9
+"(Move Add 13 ""X"")",,"In the fourth turn, player X places their mark on the middle  slide, 2nd row, 2nd column. ",tictactoe3d,9
+"(Move Add 3 ""O"")",,"In the fifth turn, player O places their mark on the front slide, 2nd row, 1st column. ",tictactoe3d,9
