@@ -16,7 +16,7 @@ def load_games() -> list[GameModel]:
         
     return games
 
-def load_query_games() -> list[GameModel]:
+def load_games_with_tasks() -> list[GameModel]:
     import os
     games = load_games()
     query_games = []
@@ -39,4 +39,4 @@ def load_system_prompt(file_path):
 
 if __name__=="__main__":
     games = load_games()
-    query_games = load_query_games()
+    query_games = load_games_with_tasks()

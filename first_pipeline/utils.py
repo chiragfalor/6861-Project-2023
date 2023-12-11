@@ -27,7 +27,7 @@ def get_fn_defn(code):
     code = code.split("//---------------")
     return code[0]
 
-def get_message_with_example(game_question, game_examples, system_prompt_file='system_prompt.txt'):
+def get_message_with_example(game_question, game_examples, system_prompt_file='desc_prompt.txt'):
     messages = []
     
     messages.append({"role": "system", "content":load_system_prompt(system_prompt_file)})
@@ -41,12 +41,12 @@ def get_message_with_example(game_question, game_examples, system_prompt_file='s
     messages.append({"role": "user", "content": f"Name: {game_question.name}\nDescription: {game_question.description}"})
     return messages
 
-def get_message_with_example_and_function_defn(game_question, game_examples, system_prompt_file='system_prompt.txt'):
+def get_message_with_example_and_function_defn(game_question, game_examples, system_prompt_file='desc_prompt.txt'):
     messages = get_message_with_example(game_question, game_examples, system_prompt_file)
     fn_description = get_fn_defn(game_question.code)
     messages.append({"role": "assistant", "content": fn_description})
     return messages
 
 
-def get_response(message_fn, game_question, game_examples):
+def get_desc_response(message_fn, game_question, game_examples):
     return get_model_response(message_fn(game_question, game_examples))
