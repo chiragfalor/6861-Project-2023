@@ -1,88 +1,88 @@
-responses,answers,query,game_name,task_id
-(Move Add (to Vertex 3) P1),,Player 1 places their piece on the upper right corner of the outer square.,achi,0
-(Move Add (to Vertex 7) P2),,Player 2 places their piece on the middle point of the upper side of the inner square.,achi,0
-(Move Add (to Vertex 1) P1),,Player 1 places their piece on the middle point of the right side of the outer square.,achi,0
-(Move Add (to Vertex 5) P2),,Player 2 places their piece on the middle point of the lower side of the outer square.,achi,0
-(Move Add (to Vertex 4) P1),,Player 1 places their piece on the lower right corner of the outer square.,achi,0
-(Move Add (to Vertex A1) P1),,Player 1 places their piece on the upper left corner of the outer square.,achi,1
-(Move Add (to Vertex A3) P2),,Player 2 places their piece on the lower left corner of the outer square.,achi,1
-(Move Add (to Vertex B1) P1),,Player 1 places their piece on the middle point of the upper side of the inner square.,achi,1
-(Move Add (to Vertex C2) P2),,Player 2 places their piece on the lower right corner of the inner square.,achi,1
-(Move Add (to Vertex B0) P1),,Player 1 places their piece on the middle point of the left side of the inner square.,achi,1
-(Move Add (to Vertex 3) P1),,Player 1 places their piece on the upper right corner of the outer square.,achi,2
-(Move Add (to Vertex 7) P2),,Player 2 places their piece on the upper right corner of the inner square.,achi,2
-(Move Add (to Vertex 2) P1),,Player 1 places their piece on the middle point of the right side of the outer square.,achi,2
-(Move Add (to Vertex 6) P2),,Player 2 places their piece on the middle point of the right side of the inner square.,achi,2
-(Move Add (to Vertex 1) P1),,Player 1 places their piece on the lower right corner of the outer square.,achi,2
-(Move Remove (from Vertex 6) P1),,Player 1 captures player 2's piece on the middle point of the right side of the inner square.,achi,2
-(Move Cell 5 - Vertex C3),,Player 1 places their piece on the upper right corner of the outer square.,achi,3
-(Move Cell 6 - Vertex C2),,Player 2 places their piece on the middle point of the right side of the outer square.,achi,3
-(Move Cell 5 - Vertex C1),,Player 1 places their piece on the lower right corner of the outer square.,achi,3
-(Move Cell 6 - Vertex A3),,Player 2 places their piece on the upper left corner of the outer square.,achi,3
-(Move Cell 5 - Vertex B1),,Player 1 places their piece on the middle point of the lower side of the inner square.,achi,3
-(Move Cell 6 - Vertex C3),,Player 2 places their piece on the upper right corner of the inner square.,achi,3
-(Move Cell 5 - Vertex A1),,Player 1 places their piece on the lower left corner of the outer square.,achi,3
-(Move Cell 6 - Vertex B1),,Player 2 places their piece on the middle point of the lower side of the outer square.,achi,3
-(Move Cell 5 - Vertex B3),,Player 1 places their piece on the middle point of the upper side of the outer square.,achi,3
-(Move Cell 6 - Vertex C1),,Player 2 places their piece on the lower right corner of the inner square.,achi,3
-(Move Cell 5 - Vertex A3),,Player 1 places their piece on the upper left corner of the inner square.,achi,3
-(Move Cell 6 - Vertex A2),,Player 2 places their piece on the middle point of the left side of the outer square.,achi,3
-(Move A3-A2),,Player 1 moves their piece from the upper left corner of the inner square to the middle point of the left side of the inner square.,achi,3
-(Move Hand1 to:4),,Player 1 places their piece on the middle point of the right side of the outer square.,achi,4
-(Move Hand2 to:7),,Player 2 places their piece on the middle point of the right side of the inner square.,achi,4
-(Move Hand1 to:8),,Player 1 places their piece on the lower right corner of the inner square.,achi,4
-(Move Hand2 to:5),,Player 2 places their piece on the upper left corner of the inner square.,achi,4
-(Move Hand1 to:2),,Player 1 places their piece on the middle point of the left side of the outer square.,achi,4
-(Move Hand2 to:6),,Player 2 places their piece on the upper right corner of the inner square.,achi,4
-(Move Hand1 to:0),,Player 1 places their piece on the lower left corner of the inner square.,achi,4
-(Move Hand2 to:9),,Player 2 places their piece on the middle point of the upper side of the inner square.,achi,4
-(Move Hand1 to E4),,Player 1 places their piece on the middle point of the right side of the outer square.,achi,5
-(Move Hand2 to C7),,Player 2 places their piece on the middle point of the upper side of the inner square.,achi,5
-(Move Hand1 to G3),,Player 1 places their piece on the lower right corner of the outer square.,achi,5
-(Move Hand2 to E7),,Player 2 places their piece on the upper right corner of the inner square.,achi,5
-(Move Hand1 to C9),,Player 1 places their piece on the middle point of the upper side of the outer square.,achi,5
-(Move Hand2 to E5),,Player 2 places their piece on the middle point of the right side of the inner square.,achi,5
-(Move Hand1 to G7),,Player 1 places their piece on the middle point of the lower side of the inner square.,achi,5
-(Move Hand2 to C3),,Player 2 places their piece on the upper left corner of the outer square.,achi,5
-(Move Hand1 to C5),,Player 1 places their piece on the middle point of the left side of the outer square.,achi,5
-(Move Hand2 to G5),,Player 2 places their piece on the lower right corner of the inner square.,achi,5
-(Remove Cell C5),,Player 2 removes Player 1's piece at the middle point of the left side of the outer square.,achi,5
-(Move Hand1 to C7),,Player 1 places their piece on the lower left corner of the inner square.,achi,5
-(Move Hand2 to C5),,Player 2 places their piece on the upper left corner of the inner square.,achi,5
-(Move Hand1 to:4),,Player 1 places their piece on the middle point of the lower side of the inner square.,achi,6
-(Move Hand2 to:7),, Player 2 places their piece on the middle point of the right side of the inner square.,achi,6
-(Move Hand1 to:1),, Player 1 places their piece on the middle point of the upper side of the inner square.,achi,6
-(Move Hand2 to:10),, Player 2 places their piece on the middle point of the left side of the outer square.,achi,6
-(Move Hand1 to:12),, Player 1 places their piece on the lower left corner of the outer square.,achi,6
-(Move Hand1 to:4),,Player 1 places their piece on the middle point of the lower side of the outer square.,achi,7
-(Move Hand2 to:1),, Player 2 places their piece on the upper left corner of the outer square.,achi,7
-(Move Hand1 to:2),, Player 1 places their piece on the middle point of the upper side of the outer square.,achi,7
-(Move Hand2 to:5),, Player 2 places their piece on the lower left corner of the outer square.,achi,7
-(Move Hand1 to:3),, Player 1 places their piece on the upper right corner of the outer square.,achi,7
-(Move Hand2 to:7),, Player 2 places their piece on the lower right corner of the outer square.,achi,7
-(Move Hand1 to:9),, Player 1 places their piece on the upper right corner of the inner square.,achi,7
-(Move Hand2 to:8),, Player 2 places their piece on the middle point of the upper side of the inner square.,achi,7
-(Move Hand1 to:6),, Player 1 places their piece on the middle point of the left side of the outer square.,achi,7
-(Move Hand2 to:10),, Player 2 places their piece on the middle point of the left side of the inner square.,achi,7
-(Move Hand1 to:11),, Player 1 places their piece on the lower right corner of the inner square.,achi,7
-(Move Hand2 to:12),, Player 2 places their piece on the lower left corner of the inner square.,achi,7
-(Move 8-9),, Player 2 moves their piece from the middle point of the upper side of the inner square to the upper left corner of the inner square.,achi,7
-(Move Add (to Vertex 3) P1),,Player 1 places their piece on the upper right corner of the outer square.,achi,8
-(Move Add (to Vertex 7) P2),, Player 2 places their piece on the middle point of the right side of the inner square.,achi,8
-(Move Add (to Vertex 6) P1),, Player 1 places their piece on the upper left corner of the inner square.,achi,8
-(Move Add (to Vertex 8) P2),, Player 2 places their piece on the lower right corner of the inner square.,achi,8
-(Move Add (to Vertex 5) P1),, Player 1 places their piece on the middle point of the upper side of the inner square.,achi,8
-(Move Add (to Vertex 2) P2),, Player 2 places their piece on the upper right corner of the inner square.,achi,8
-(Move Remove (from Vertex 3) P2),, Player 2 removes Player 1's piece at the upper right corner of the outer square.,achi,8
-(Move Add (to Vertex 9) P1),, Player 1 places their piece on the middle point of the left side of the inner square.,achi,8
-(Move Add (to Vertex 11) P2),, Player 2 places their piece on the middle point of the lower side of the outer square.,achi,8
-(Move Add (to Vertex 10) P1),, Player 1 places their piece on the lower left corner of the inner square.,achi,8
-(Move Cell 5 - Vertex H1),,Player 1 places their piece on the lower right corner of the outer square.,achi,9
-(Move Cell 6 - Vertex H3),, Player 2 places their piece on the upper right corner of the outer square.,achi,9
-(Move Cell 5 - Vertex G2),, Player 1 places their piece on the middle point of the right side of the inner square.,achi,9
-(Move Cell 6 - Vertex E3),, Player 2 places their piece on the upper left corner of the inner square.,achi,9
-(Move Cell 5 - Vertex A1),,Player 1 places their piece on the lower left corner of the inner square.,achi,10
-(Move Cell 6 - Vertex C2),, Player 2 places their piece on the middle point of the right side of the outer square.,achi,10
-(Move Cell 5 - Vertex B1),, Player 1 places their piece on the middle point of the lower side of the inner square.,achi,10
-(Move Cell 6 - Vertex B3),, Player 2 places their piece on the middle point of the upper side of the outer square.,achi,10
-(Move Cell 5 - Vertex C1),, Player 1 places their piece on the lower right corner of the inner square.,achi,10
+responses,answers,query,game_name,task_id,move_num
+(Move Add (to Vertex 3) P1),(Move Cell 16 - Vertex E5),Player 1 places their piece on the upper right corner of the outer square.,achi,0,0
+(Move Add (to Vertex 7) P2),(Move Cell 17 - Vertex C4),Player 2 places their piece on the middle point of the upper side of the inner square.,achi,0,1
+(Move Add (to Vertex 1) P1),(Move Cell 16 - Vertex E3),Player 1 places their piece on the middle point of the right side of the outer square.,achi,0,2
+(Move Add (to Vertex 5) P2),(Move Cell 17 - Vertex C1),Player 2 places their piece on the middle point of the lower side of the outer square.,achi,0,3
+(Move Add (to Vertex 4) P1),(Move Cell 16 - Vertex E1),Player 1 places their piece on the lower right corner of the outer square.,achi,0,4
+(Move Add (to Vertex A1) P1),(Move Cell 16 - Vertex A5),Player 1 places their piece on the upper left corner of the outer square.,achi,1,0
+(Move Add (to Vertex A3) P2),(Move Cell 17 - Vertex A1),Player 2 places their piece on the lower left corner of the outer square.,achi,1,1
+(Move Add (to Vertex B1) P1),(Move Cell 16 - Vertex C4),Player 1 places their piece on the middle point of the upper side of the inner square.,achi,1,2
+(Move Add (to Vertex C2) P2),(Move Cell 17 - Vertex D2),Player 2 places their piece on the lower right corner of the inner square.,achi,1,3
+(Move Add (to Vertex B0) P1),(Move Cell 16 - Vertex B3),Player 1 places their piece on the middle point of the left side of the inner square.,achi,1,4
+(Move Add (to Vertex 3) P1),(Move Cell 16 - Vertex E5),Player 1 places their piece on the upper right corner of the outer square.,achi,2,0
+(Move Add (to Vertex 7) P2),(Move Cell 17 - Vertex D4),Player 2 places their piece on the upper right corner of the inner square.,achi,2,1
+(Move Add (to Vertex 2) P1),(Move Cell 16 - Vertex E3),Player 1 places their piece on the middle point of the right side of the outer square.,achi,2,2
+(Move Add (to Vertex 6) P2),(Move Cell 17 - Vertex D3),Player 2 places their piece on the middle point of the right side of the inner square.,achi,2,3
+(Move Add (to Vertex 1) P1),(Move Cell 16 - Vertex E1),Player 1 places their piece on the lower right corner of the outer square.,achi,2,4
+(Move Remove (from Vertex 6) P1),(Remove D3),Player 1 captures player 2's piece on the middle point of the right side of the inner square.,achi,2,5
+(Move Cell 5 - Vertex C3),(Move Cell 16 - Vertex E5),Player 1 places their piece on the upper right corner of the outer square.,achi,3,0
+(Move Cell 6 - Vertex C2),(Move Cell 17 - Vertex E3),Player 2 places their piece on the middle point of the right side of the outer square.,achi,3,1
+(Move Cell 5 - Vertex C1),(Move Cell 16 - Vertex E1),Player 1 places their piece on the lower right corner of the outer square.,achi,3,2
+(Move Cell 6 - Vertex A3),(Move Cell 17 - Vertex A5),Player 2 places their piece on the upper left corner of the outer square.,achi,3,3
+(Move Cell 5 - Vertex B1),(Move Cell 16 - Vertex C2),Player 1 places their piece on the middle point of the lower side of the inner square.,achi,3,4
+(Move Cell 6 - Vertex C3),(Move Cell 17 - Vertex D4),Player 2 places their piece on the upper right corner of the inner square.,achi,3,5
+(Move Cell 5 - Vertex A1),(Move Cell 16 - Vertex A1),Player 1 places their piece on the lower left corner of the outer square.,achi,3,6
+(Move Cell 6 - Vertex B1),(Move Cell 17 - Vertex C1),Player 2 places their piece on the middle point of the lower side of the outer square.,achi,3,7
+(Move Cell 5 - Vertex B3),(Move Cell 16 - Vertex C5),Player 1 places their piece on the middle point of the upper side of the outer square.,achi,3,8
+(Move Cell 6 - Vertex C1),(Move Cell 17 - Vertex D2),Player 2 places their piece on the lower right corner of the inner square.,achi,3,9
+(Move Cell 5 - Vertex A3),(Move Cell 16 - Vertex B4),Player 1 places their piece on the upper left corner of the inner square.,achi,3,10
+(Move Cell 6 - Vertex A2),(Move Cell 17 - Vertex A3),Player 2 places their piece on the middle point of the left side of the outer square.,achi,3,11
+(Move A3-A2),(Move B4-B3),Player 1 moves their piece from the upper left corner of the inner square to the middle point of the left side of the inner square.,achi,3,12
+(Move Hand1 to:4),(Move Cell 16 - Vertex E3),Player 1 places their piece on the middle point of the right side of the outer square.,achi,4,0
+(Move Hand2 to:7),(Move Cell 17 - Vertex D3),Player 2 places their piece on the middle point of the right side of the inner square.,achi,4,1
+(Move Hand1 to:8),(Move Cell 16 - Vertex D2),Player 1 places their piece on the lower right corner of the inner square.,achi,4,2
+(Move Hand2 to:5),(Move Cell 17 - Vertex B4),Player 2 places their piece on the upper left corner of the inner square.,achi,4,3
+(Move Hand1 to:2),(Move Cell 16 - Vertex A3),Player 1 places their piece on the middle point of the left side of the outer square.,achi,4,4
+(Move Hand2 to:6),(Move Cell 17 - Vertex D4),Player 2 places their piece on the upper right corner of the inner square.,achi,4,5
+(Move Hand1 to:0),(Move Cell 16 - Vertex B2),Player 1 places their piece on the lower left corner of the inner square.,achi,4,6
+(Move Hand2 to:9),(Move Cell 17 - Vertex C4),Player 2 places their piece on the middle point of the upper side of the inner square.,achi,4,7
+(Move Hand1 to E4),(Move Cell 16 - Vertex E3),Player 1 places their piece on the middle point of the right side of the outer square.,achi,5,0
+(Move Hand2 to C7),(Move Cell 17 - Vertex C4),Player 2 places their piece on the middle point of the upper side of the inner square.,achi,5,1
+(Move Hand1 to G3),(Move Cell 16 - Vertex E1),Player 1 places their piece on the lower right corner of the outer square.,achi,5,2
+(Move Hand2 to E7),(Move Cell 17 - Vertex D4),Player 2 places their piece on the upper right corner of the inner square.,achi,5,3
+(Move Hand1 to C9),(Move Cell 16 - Vertex C5),Player 1 places their piece on the middle point of the upper side of the outer square.,achi,5,4
+(Move Hand2 to E5),(Move Cell 17 - Vertex D3),Player 2 places their piece on the middle point of the right side of the inner square.,achi,5,5
+(Move Hand1 to G7),(Move Cell 16 - Vertex C2),Player 1 places their piece on the middle point of the lower side of the inner square.,achi,5,6
+(Move Hand2 to C3),(Move Cell 17 - Vertex A5),Player 2 places their piece on the upper left corner of the outer square.,achi,5,7
+(Move Hand1 to C5),(Move Cell 16 - Vertex A3),Player 1 places their piece on the middle point of the left side of the outer square.,achi,5,8
+(Move Hand2 to G5),(Move Cell 17 - Vertex D2),Player 2 places their piece on the lower right corner of the inner square.,achi,5,9
+(Remove Cell C5),(Remove A3),Player 2 removes Player 1's piece at the middle point of the left side of the outer square.,achi,5,10
+(Move Hand1 to C7),(Move Cell 16 - Vertex B2),Player 1 places their piece on the lower left corner of the inner square.,achi,5,11
+(Move Hand2 to C5),(Move Cell 17 - Vertex B4),Player 2 places their piece on the upper left corner of the inner square.,achi,5,12
+(Move Hand1 to:4),(Move Cell 16 - Vertex C2),Player 1 places their piece on the middle point of the lower side of the inner square.,achi,6,0
+(Move Hand2 to:7),(Move Cell 17 - Vertex D3), Player 2 places their piece on the middle point of the right side of the inner square.,achi,6,1
+(Move Hand1 to:1),(Move Cell 16 - Vertex C4), Player 1 places their piece on the middle point of the upper side of the inner square.,achi,6,2
+(Move Hand2 to:10),(Move Cell 17 - Vertex A3), Player 2 places their piece on the middle point of the left side of the outer square.,achi,6,3
+(Move Hand1 to:12),(Move Cell 16 - Vertex A1), Player 1 places their piece on the lower left corner of the outer square.,achi,6,4
+(Move Hand1 to:4),(Move Cell 16 - Vertex C1),Player 1 places their piece on the middle point of the lower side of the outer square.,achi,7,0
+(Move Hand2 to:1),(Move Cell 17 - Vertex A5), Player 2 places their piece on the upper left corner of the outer square.,achi,7,1
+(Move Hand1 to:2),(Move Cell 16 - Vertex C5), Player 1 places their piece on the middle point of the upper side of the outer square.,achi,7,2
+(Move Hand2 to:5),(Move Cell 17 - Vertex A1), Player 2 places their piece on the lower left corner of the outer square.,achi,7,3
+(Move Hand1 to:3),(Move Cell 16 - Vertex E5), Player 1 places their piece on the upper right corner of the outer square.,achi,7,4
+(Move Hand2 to:7),(Move Cell 17 - Vertex E1), Player 2 places their piece on the lower right corner of the outer square.,achi,7,5
+(Move Hand1 to:9),(Move Cell 16 - Vertex D4), Player 1 places their piece on the upper right corner of the inner square.,achi,7,6
+(Move Hand2 to:8),(Move Cell 17 - Vertex C4), Player 2 places their piece on the middle point of the upper side of the inner square.,achi,7,7
+(Move Hand1 to:6),(Move Cell 16 - Vertex A3), Player 1 places their piece on the middle point of the left side of the outer square.,achi,7,8
+(Move Hand2 to:10),(Move Cell 17 - Vertex B3), Player 2 places their piece on the middle point of the left side of the inner square.,achi,7,9
+(Move Hand1 to:11),(Move Cell 16 - Vertex D2), Player 1 places their piece on the lower right corner of the inner square.,achi,7,10
+(Move Hand2 to:12),(Move Cell 17 - Vertex B2), Player 2 places their piece on the lower left corner of the inner square.,achi,7,11
+(Move 8-9),(Move C4-B4), Player 2 moves their piece from the middle point of the upper side of the inner square to the upper left corner of the inner square.,achi,7,12
+(Move Add (to Vertex 3) P1),(Move Cell 16 - Vertex E5),Player 1 places their piece on the upper right corner of the outer square.,achi,8,0
+(Move Add (to Vertex 7) P2),(Move Cell 17 - Vertex D3), Player 2 places their piece on the middle point of the right side of the inner square.,achi,8,1
+(Move Add (to Vertex 6) P1),(Move Cell 16 - Vertex B4), Player 1 places their piece on the upper left corner of the inner square.,achi,8,2
+(Move Add (to Vertex 8) P2),(Move Cell 17 - Vertex D2), Player 2 places their piece on the lower right corner of the inner square.,achi,8,3
+(Move Add (to Vertex 5) P1),(Move Cell 16 - Vertex C4), Player 1 places their piece on the middle point of the upper side of the inner square.,achi,8,4
+(Move Add (to Vertex 2) P2),(Move Cell 17 - Vertex D4), Player 2 places their piece on the upper right corner of the inner square.,achi,8,5
+(Move Remove (from Vertex 3) P2),(Remove E5), Player 2 removes Player 1's piece at the upper right corner of the outer square.,achi,8,6
+(Move Add (to Vertex 9) P1),(Move Cell 16 - Vertex B3), Player 1 places their piece on the middle point of the left side of the inner square.,achi,8,7
+(Move Add (to Vertex 11) P2),(Move Cell 17 - Vertex C1), Player 2 places their piece on the middle point of the lower side of the outer square.,achi,8,8
+(Move Add (to Vertex 10) P1),(Move Cell 16 - Vertex B2), Player 1 places their piece on the lower left corner of the inner square.,achi,8,9
+(Move Cell 5 - Vertex H1),(Move Cell 16 - Vertex E1),Player 1 places their piece on the lower right corner of the outer square.,achi,9,0
+(Move Cell 6 - Vertex H3),(Move Cell 17 - Vertex E5), Player 2 places their piece on the upper right corner of the outer square.,achi,9,1
+(Move Cell 5 - Vertex G2),(Move Cell 16 - Vertex D3), Player 1 places their piece on the middle point of the right side of the inner square.,achi,9,2
+(Move Cell 6 - Vertex E3),(Move Cell 17 - Vertex B4), Player 2 places their piece on the upper left corner of the inner square.,achi,9,3
+(Move Cell 5 - Vertex A1),(Move Cell 16 - Vertex B2),Player 1 places their piece on the lower left corner of the inner square.,achi,10,0
+(Move Cell 6 - Vertex C2),(Move Cell 17 - Vertex E3), Player 2 places their piece on the middle point of the right side of the outer square.,achi,10,1
+(Move Cell 5 - Vertex B1),(Move Cell 16 - Vertex C2), Player 1 places their piece on the middle point of the lower side of the inner square.,achi,10,2
+(Move Cell 6 - Vertex B3),(Move Cell 17 - Vertex C5), Player 2 places their piece on the middle point of the upper side of the outer square.,achi,10,3
+(Move Cell 5 - Vertex C1),(Move Cell 16 - Vertex D2), Player 1 places their piece on the lower right corner of the inner square.,achi,10,4
